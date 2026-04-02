@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "native-tfjs-bench"
+version = "0.1.0"
+description = "Native Windows CUDA benchmark extending the TF.js pretrained model paper"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "pandas>=2.0",
+    "torch>=2.0",
+    "pynvml>=11.0",
+    "pyyaml>=6.0",
+    "click>=8.1",
+    "tqdm>=4.65",
+    "tabulate>=0.9",
+]
+
+[project.optional-dependencies]
+onnx = ["onnxruntime-gpu>=1.16"]
+mediapipe = ["mediapipe>=0.10"]
+dev = ["pytest>=7.0", "black>=23.0", "ruff>=0.4"]
+
+[project.scripts]
+# CLI entry point: `native-bench <command>`
+native-bench = "benchmark.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["benchmark*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = ["E", "F", "W", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v"

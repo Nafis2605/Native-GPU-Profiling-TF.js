@@ -1,0 +1,203 @@
+benchmark:
+  name: native_tfjs_pretrained_phase1
+  version: "1.0"
+  description: "Native Windows CUDA benchmark for 10 TF.js pretrained model equivalents"
+
+# ── Trial configuration ────────────────────────────────────────────────────
+trial_config:
+  num_trials: 5
+  warmup_iterations: 10
+  measured_iterations: 1024
+  batch_size: 1
+  random_seed: 12345
+  # Maximum wall-clock seconds allowed per subprocess trial before timeout
+  timeout_seconds_per_trial: 600
+
+# ── Model list ─────────────────────────────────────────────────────────────
+# One entry per TF.js pretrained model from the paper.
+# ── Profiler configuration ────────────────────────────────────────────────────
+# Controls the four experiment modes:
+#   clean  – publishable latency benchmark only (no heavy profiler attached)
+#   nsys   – clean trials + Nsight Systems diagnostic pass for selected models
+#   ncu    – clean trials + Nsight Compute diagnostic pass for selected models
+#   hybrid – clean trials + both nsys and ncu diagnostic passes
+#
+# CLI flags (--mode, --profile-trials, etc.) override these values at runtime.
+profiler_config:
+  mode: clean                    # clean | nsys | ncu | hybrid
+
+  # Which trials / models receive profiling passes (null = all)
+  profile_trials: [0]            # 0-based trial indices
+  profile_models: null           # null = all enabled models; or e.g. [1, 6, 10]
+
+  # Profiled subprocess iteration counts (keep << measured_iterations)
+  profile_iterations: 20
+  profile_warmup: 2
+
+  # Nsight Systems options
+  nsys_trace: "cuda,nvtx,osrt"
+
+  # Nsight Compute options
+  ncu_launch_skip: 0             # kernel launches to skip before profiling
+  ncu_launch_count: 10           # number of kernel launches to profile
+  ncu_kernel_regex: null         # optional regex filter on kernel names
+
+  # Artifact retention (binary .nsys-rep / .ncu-rep alongside parsed JSON)
+  keep_raw_artifacts: false
+
+  # Error handling: true = abort on missing profiler binary; false = warn & skip
+  fail_on_missing_profiler: false
+
+  # Per-profiling-run timeout in seconds (ncu overhead can be 10x–100x)
+  profiler_timeout_seconds: 3600
+
+
+# ── Model registry ────────────────────────────────────────────────────────────
+# exactness_status must be one of:
+#   exact_official_equivalent | near_equivalent_substitute |
+#   proxy_reference_implementation | unsupported_no_equivalent
+#
+# Set enabled: false to skip a model without removing it from the manifest.
+models:
+  - model_id: 1
+    model_name: selfie_segmentation
+    paper_arch: "Google ML Kit / custom segmentation"
+    expected_task: "Semantic segmentation (1 class)"
+    native_framework: onnxruntime-gpu
+    native_model_name: selfie_segmentation.onnx
+    exactness_status: near_equivalent_substitute
+    enabled: true
+    input_shape: [1, 256, 256, 3]
+    input_dtype: float32
+    notes: >
+      Convert TF.js weights → ONNX via tf2onnx.
+      Validate output shape [1, H, W, 1] and binary mask semantics.
+
+  - model_id: 2
+    model_name: hand_pose_3d
+    paper_arch: "MediaPipe / custom hand landmark"
+    expected_task: "3D hand landmark detection"
+    native_framework: mediapipe
+    native_model_name: hand_landmarker.task
+    exactness_status: exact_official_equivalent
+    enabled: true
+    input_shape: [1, 224, 224, 3]
+    input_dtype: float32
+    notes: >
+      Use official MediaPipe Python SDK (mediapipe.tasks.vision.HandLandmarker).
+      Weights identical to browser MediaPipe.js.
+
+  - model_id: 3
+    model_name: speech_command_recognizer
+    paper_arch: "Google / custom CNN (audio spectrogram input)"
+    expected_task: "Audio classification – 18 speech command classes"
+    native_framework: onnxruntime-gpu
+    native_model_name: speech_commands.onnx
+    exactness_status: near_equivalent_substitute
+    enabled: true
+    input_shape: [1, 1, 124, 129]   # [batch, channels, time_frames, freq_bins]
+    input_dtype: float32
+    notes: >
+      TF.js model converts via TFLite → ONNX.
+      Benchmark uses synthetic spectrogram; real audio preprocessing not required
+      for latency-focused inference benchmarking.
+
+  - model_id: 4
+    model_name: coco_ssd
+    paper_arch: "SSD MobileNet V2 / TensorFlow Object Detection API"
+    expected_task: "Object detection – 90 COCO classes"
+    native_framework: onnxruntime-gpu
+    native_model_name: ssd_mobilenet_v2_coco.onnx
+    exactness_status: near_equivalent_substitute
+    enabled: true
+    input_shape: [1, 300, 300, 3]
+    input_dtype: uint8
+    notes: >
+      Load official TF2 SavedModel from TF Model Zoo, convert via tf2onnx.
+      Verify that NMS post-processing is included in the exported graph.
+
+  - model_id: 5
+    model_name: mobilebert
+    paper_arch: "Google MobileBERT (compressed BERT)"
+    expected_task: "Text embedding / classification (128 token sequence)"
+    native_framework: onnxruntime-gpu
+    native_model_name: mobilebert.onnx
+    exactness_status: near_equivalent_substitute
+    enabled: true
+    input_shape: [1, 128]           # [batch, seq_len]; int64 token IDs
+    input_dtype: int64
+    notes: >
+      Load from Hugging Face ONNX model hub (google/mobilebert-uncased).
+      Benchmark feeds synthetic integer token IDs; tokenizer not required
+      for pure inference latency measurement.
+
+  - model_id: 6
+    model_name: mobilenetv3
+    paper_arch: "MobileNetV3-Small / ImageNet"
+    expected_task: "Image classification – 1000 ImageNet classes"
+    native_framework: onnxruntime-gpu
+    native_model_name: mobilenetv3_small.onnx
+    exactness_status: near_equivalent_substitute
+    enabled: true
+    input_shape: [1, 3, 224, 224]   # NCHW layout (ONNX convention)
+    input_dtype: float32
+    notes: >
+      Use torchvision pretrained MobileNetV3-Small exported to ONNX.
+      Apply ImageNet mean/std normalization to synthetic inputs.
+
+  - model_id: 7
+    model_name: ar_portrait_depth
+    paper_arch: "Google / MediaPipe monocular depth estimation"
+    expected_task: "Single-image portrait depth estimation"
+    native_framework: mediapipe
+    native_model_name: portrait_depth.task
+    exactness_status: exact_official_equivalent
+    enabled: true
+    input_shape: [1, 256, 256, 3]
+    input_dtype: float32
+    notes: >
+      Use official MediaPipe ImageEmbedder / Depth tasks.
+      Exact model weights match browser MediaPipe.js.
+
+  - model_id: 8
+    model_name: bodypix
+    paper_arch: "Google BodyPix / ResNet or MobileNet backbone"
+    expected_task: "Semantic body-part segmentation (24 body parts)"
+    native_framework: onnxruntime-gpu
+    native_model_name: bodypix.onnx
+    exactness_status: near_equivalent_substitute
+    enabled: true
+    input_shape: [1, 3, 513, 513]
+    input_dtype: float32
+    notes: >
+      TF.js BodyPix → ONNX via tf2onnx.
+      MediaPipe Selfie Segmentation is an acceptable fallback if conversion fails.
+      Validate output shape [1, H, W, num_parts].
+
+  - model_id: 9
+    model_name: posenet
+    paper_arch: "Google PoseNet / MobileNet backbone"
+    expected_task: "2D body pose estimation (17 keypoints)"
+    native_framework: mediapipe
+    native_model_name: pose_landmarker.task
+    exactness_status: exact_official_equivalent
+    enabled: true
+    input_shape: [1, 256, 256, 3]
+    input_dtype: float32
+    notes: >
+      Use official MediaPipe Pose Landmarker solution.
+      Weights match browser MediaPipe Pose.
+
+  - model_id: 10
+    model_name: deeplabv3
+    paper_arch: "DeepLabV3+ / MobileNet V2 backbone"
+    expected_task: "Semantic segmentation – 21 Pascal VOC classes"
+    native_framework: onnxruntime-gpu
+    native_model_name: deeplabv3_mobilenet_v2.onnx
+    exactness_status: near_equivalent_substitute
+    enabled: true
+    input_shape: [1, 3, 513, 513]
+    input_dtype: float32
+    notes: >
+      Convert TF.js DeepLab model via tf2onnx.
+      Verify class label mapping matches Pascal VOC (21 classes incl. background).
