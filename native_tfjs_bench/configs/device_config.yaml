@@ -1,0 +1,33 @@
+# Device and telemetry configuration for native-tfjs-bench
+
+gpu:
+  # CUDA device index (0 = first GPU)
+  device_index: 0
+  # Set to true to attempt to lock GPU clocks via NVML for reproducibility.
+  # Requires elevated privileges on most systems; silently skipped if not available.
+  lock_clocks: false
+  # CUDA compute mode: "default" | "exclusive_process"
+  compute_mode: "default"
+
+nvml:
+  # Enable NVML-based GPU telemetry (util, memory, power)
+  enabled: true
+  # Polling frequency in Hz during the measured phase
+  poll_interval_hz: 5
+  # Seconds to wait for NVML init before declaring it unavailable
+  timeout_seconds: 5
+
+output:
+  # Root directory for all trial outputs (relative to project root)
+  base_dir: "benchmark/output"
+  # Write per-iteration CSV (wall_clock_ms, kernel_time_ms per row)
+  csv_per_iteration: true
+  # Write per-trial JSON summary
+  json_summary: true
+  # If false, raise an error rather than overwriting existing trial outputs
+  overwrite_existing: false
+
+logging:
+  level: INFO
+  log_to_file: true
+  log_dir: "benchmark/output/logs"

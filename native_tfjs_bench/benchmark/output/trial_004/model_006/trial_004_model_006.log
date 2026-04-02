@@ -1,0 +1,28 @@
+2026-04-01T20:23:20 [INFO    ] run_one_model: Process start | pid=7312 | model_id=6 | trial_id=4
+2026-04-01T20:23:20 [INFO    ] benchmark.runner: Trial 4 | Model 6 (mobilenetv3) | Framework: pytorch
+2026-04-01T20:23:21 [INFO    ] benchmark.models.model_mobilenetv3: Loading MobileNetV3-Small (torchvision IMAGENET1K_V1) on cuda …
+2026-04-01T20:23:21 [ERROR   ] benchmark.runner:   Model 6 load failed: <urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>
+2026-04-01T20:23:21 [INFO    ] run_one_model: Process exit | status=failed
+2026-04-01T20:28:14 [INFO    ] run_one_model: Process start | pid=17468 | model_id=6 | trial_id=4
+2026-04-01T20:28:15 [INFO    ] benchmark.runner: Trial 4 | Model 6 (mobilenetv3) | Framework: pytorch
+2026-04-01T20:28:15 [INFO    ] benchmark.models.model_mobilenetv3: Loading MobileNetV3-Small (torchvision IMAGENET1K_V1) on cuda …
+2026-04-01T20:28:15 [ERROR   ] benchmark.runner:   Model 6 load failed: Torch not compiled with CUDA enabled
+2026-04-01T20:28:15 [INFO    ] run_one_model: Process exit | status=failed
+2026-04-01T20:28:32 [INFO    ] run_one_model: Process start | pid=18324 | model_id=6 | trial_id=4
+2026-04-01T20:28:32 [INFO    ] benchmark.runner: Trial 4 | Model 6 (mobilenetv3) | Framework: pytorch
+2026-04-01T20:28:33 [INFO    ] benchmark.models.model_mobilenetv3: Loading MobileNetV3-Small (torchvision IMAGENET1K_V1) on cuda …
+2026-04-01T20:28:33 [ERROR   ] benchmark.runner:   Model 6 load failed: Torch not compiled with CUDA enabled
+2026-04-01T20:28:33 [INFO    ] run_one_model: Process exit | status=failed
+2026-04-01T20:28:54 [INFO    ] run_one_model: Process start | pid=2236 | model_id=6 | trial_id=4
+2026-04-01T20:28:54 [INFO    ] benchmark.runner: Trial 4 | Model 6 (mobilenetv3) | Framework: pytorch
+2026-04-01T20:28:55 [INFO    ] benchmark.models.model_mobilenetv3: Loading MobileNetV3-Small (torchvision IMAGENET1K_V1) on cuda …
+2026-04-01T20:28:55 [ERROR   ] benchmark.runner:   Model 6 load failed: Torch not compiled with CUDA enabled
+2026-04-01T20:28:55 [INFO    ] run_one_model: Process exit | status=failed
+2026-04-01T20:58:15 [INFO    ] run_one_model: Process start | pid=15436 | model_id=6 | trial_id=4
+2026-04-01T20:58:15 [INFO    ] benchmark.runner: Trial 4 | Model 6 (mobilenetv3) | Framework: pytorch
+2026-04-01T20:58:16 [INFO    ] benchmark.models.model_mobilenetv3: Loading MobileNetV3-Small (torchvision IMAGENET1K_V1) on cuda …
+2026-04-01T20:58:16 [INFO    ] benchmark.models.model_mobilenetv3: MobileNetV3-Small loaded and ready on cuda
+2026-04-01T20:58:16 [INFO    ] benchmark.runner:   Load complete in 1006.81 ms
+2026-04-01T20:58:17 [INFO    ] benchmark.runner:   Warm-up: 10 iters in 194.25 ms (1st=171.12 ms)
+2026-04-01T20:58:19 [INFO    ] benchmark.runner:   Done | mean=2.72 ms | p95=3.57 ms | kernel=2.69 ms | status=success
+2026-04-01T20:58:19 [INFO    ] run_one_model: Process exit | status=success

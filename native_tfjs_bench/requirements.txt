@@ -1,0 +1,38 @@
+# ── Core scientific computing ──────────────────────────────────────────────
+numpy>=1.24
+scipy>=1.10
+pandas>=2.0
+
+# ── Deep learning inference ────────────────────────────────────────────────
+# PyTorch with CUDA. Install the CUDA-enabled wheel from pytorch.org:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+torch>=2.0
+torchvision>=0.15
+
+# ── ONNX inference backend (GPU) ───────────────────────────────────────────
+# Required for most of the 10 models.
+# NOTE: install onnxruntime-gpu, NOT onnxruntime (CPU-only).
+onnxruntime-gpu>=1.16
+
+# ── NVIDIA GPU telemetry ───────────────────────────────────────────────────
+pynvml>=11.0
+
+# ── Configuration and CLI ─────────────────────────────────────────────────
+pyyaml>=6.0
+click>=8.1
+
+# ── Progress and display ──────────────────────────────────────────────────
+tqdm>=4.65
+tabulate>=0.9
+
+# ── Optional: MediaPipe (models 2, 7, 9) ──────────────────────────────────
+# mediapipe>=0.10
+
+# ── Optional: TensorRT Python bindings ────────────────────────────────────
+# Must match your installed TensorRT version from NVIDIA:
+# tensorrt>=8.4
+
+# ── Development extras ────────────────────────────────────────────────────
+# pytest>=7.0
+# black>=23.0
+# ruff>=0.4

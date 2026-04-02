@@ -1,0 +1,18 @@
+Command : C:\ProgramData\miniconda3\python.exe C:\Users\fanaf\Desktop\Native\native_tfjs_bench\scripts\run_one_model.py --model-id 6 --trial-id 1 --output-dir benchmark\output\trial_001\model_006 --warmup 10 --iterations 1024 --seed 12345 --device cuda --run-mode clean_benchmark
+Exit code: 0
+Elapsed  : 5.44s
+Timed out: False
+
+--- STDOUT ---
+2026-04-01T20:57:58 [INFO    ] run_one_model: Process start | pid=15024 | model_id=6 | trial_id=1
+2026-04-01T20:57:58 [INFO    ] benchmark.runner: Trial 1 | Model 6 (mobilenetv3) | Framework: pytorch
+2026-04-01T20:57:59 [INFO    ] benchmark.models.model_mobilenetv3: Loading MobileNetV3-Small (torchvision IMAGENET1K_V1) on cuda …
+2026-04-01T20:57:59 [INFO    ] benchmark.models.model_mobilenetv3: MobileNetV3-Small loaded and ready on cuda
+2026-04-01T20:57:59 [INFO    ] benchmark.runner:   Load complete in 1016.71 ms
+2026-04-01T20:57:59 [INFO    ] benchmark.runner:   Warm-up: 10 iters in 194.07 ms (1st=170.55 ms)
+2026-04-01T20:58:02 [INFO    ] benchmark.runner:   Done | mean=2.75 ms | p95=3.59 ms | kernel=2.72 ms | status=success
+2026-04-01T20:58:02 [INFO    ] run_one_model: Process exit | status=success
+
+
+--- STDERR ---
+(empty)
