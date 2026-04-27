@@ -1,0 +1,4 @@
+2026-04-26T13:49:27 [INFO    ] run_one_model: Process start | pid=32572 | model_id=8 | trial_id=1
+2026-04-26T13:49:27 [INFO    ] benchmark.runner: Trial 1 | Model 8 (bodypix) | Framework: pytorch
+2026-04-26T13:49:27 [WARNING ] benchmark.runner:   Model 8 not yet implemented: Model 'bodypix' (id=8) is not yet implemented (Phase 1B stub). Blocker: UNRESOLVED — No 24-part body segmentation in standard PyTorch libraries. BodyPix is deprecated (2022). MediaPipe Selfie Segmentation is binary foreground/background (different task). Alternative: extract & convert BodyPix from npm ONNX.. See docs/model_mapping_audit.md for implementation guidance.
+2026-04-26T13:49:27 [INFO    ] run_one_model: Process exit | status=unsupported

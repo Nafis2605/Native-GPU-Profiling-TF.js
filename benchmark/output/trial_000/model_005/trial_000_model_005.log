@@ -1,0 +1,104 @@
+2026-04-26T13:43:47 [INFO    ] run_one_model: Process start | pid=29780 | model_id=5 | trial_id=0
+2026-04-26T13:43:47 [INFO    ] benchmark.runner: Trial 0 | Model 5 (mobilebert) | Framework: pytorch
+2026-04-26T13:43:51 [INFO    ] benchmark.models.model_mobilebert: Loading google/mobilebert-uncased on cuda …
+2026-04-26T13:43:54 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: cd183e74-b440-459d-8a11-cae37f39eb8a)')' thrown while requesting HEAD https://huggingface.co/google/mobilebert-uncased/resolve/main/config.json
+2026-04-26T13:43:54 [WARNING ] huggingface_hub.utils._http: Retrying in 1s [Retry 1/5].
+2026-04-26T13:43:55 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: bf1a4cc4-80f4-4766-a1dd-e7477743cefd)')' thrown while requesting HEAD https://huggingface.co/google/mobilebert-uncased/resolve/main/config.json
+2026-04-26T13:43:55 [WARNING ] huggingface_hub.utils._http: Retrying in 2s [Retry 2/5].
+2026-04-26T13:43:58 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 356c1592-b187-49fb-9208-562f597f899e)')' thrown while requesting HEAD https://huggingface.co/google/mobilebert-uncased/resolve/main/config.json
+2026-04-26T13:43:58 [WARNING ] huggingface_hub.utils._http: Retrying in 4s [Retry 3/5].
+2026-04-26T13:44:02 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: e7b46863-ab50-4b98-8046-71bf5f16ebf2)')' thrown while requesting HEAD https://huggingface.co/google/mobilebert-uncased/resolve/main/config.json
+2026-04-26T13:44:02 [WARNING ] huggingface_hub.utils._http: Retrying in 8s [Retry 4/5].
+2026-04-26T13:44:10 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 958bc4aa-e8fb-4eb7-b5ca-dad34dc13e4e)')' thrown while requesting HEAD https://huggingface.co/google/mobilebert-uncased/resolve/main/config.json
+2026-04-26T13:44:10 [WARNING ] huggingface_hub.utils._http: Retrying in 8s [Retry 5/5].
+2026-04-26T13:44:18 [INFO    ] benchmark.models.model_mobilebert: MobileBERT loaded on cuda
+2026-04-26T13:44:18 [INFO    ] benchmark.runner:   Load complete in 31153.72 ms
+2026-04-26T13:44:19 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T13:44:19 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 109.74 ms
+2026-04-26T13:44:20 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T13:44:43 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T13:44:43 [INFO    ] benchmark.runner:   Done | 1st-call=109.74 ms | mean=22.46 ms | p95=23.75 ms | kernel=22.42 ms | status=success
+2026-04-26T13:44:43 [INFO    ] run_one_model: Process exit | status=success
+2026-04-26T14:29:33 [INFO    ] run_one_model: Process start | pid=10692 | model_id=5 | trial_id=0
+2026-04-26T14:29:33 [INFO    ] benchmark.runner: Trial 0 | Model 5 (mobilebert) | Framework: pytorch
+2026-04-26T14:29:37 [INFO    ] benchmark.models.model_mobilebert: Loading google/mobilebert-uncased on cuda …
+2026-04-26T14:29:37 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: b77a070f-c002-4e23-a859-60a47978010f)')' thrown while requesting HEAD https://huggingface.co/google/mobilebert-uncased/resolve/main/config.json
+2026-04-26T14:29:37 [WARNING ] huggingface_hub.utils._http: Retrying in 1s [Retry 1/5].
+2026-04-26T14:29:38 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: cbfd3a6e-bc3a-4ede-9368-3c6458c0cc42)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/google/mobilebert-uncased/1f90a6c24c7879273a291d34a849033eba2dbc0f/config.json
+2026-04-26T14:29:38 [WARNING ] huggingface_hub.utils._http: Retrying in 1s [Retry 1/5].
+2026-04-26T14:29:39 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 564d76ce-0572-4445-a816-a9de9ead37b1)')' thrown while requesting HEAD https://huggingface.co/google/mobilebert-uncased/resolve/main/config.json
+2026-04-26T14:29:39 [WARNING ] huggingface_hub.utils._http: Retrying in 1s [Retry 1/5].
+2026-04-26T14:29:40 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 10975e72-f146-47ca-9a7b-8d902768fbab)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/google/mobilebert-uncased/1f90a6c24c7879273a291d34a849033eba2dbc0f/config.json
+2026-04-26T14:29:40 [WARNING ] huggingface_hub.utils._http: Retrying in 1s [Retry 1/5].
+2026-04-26T14:29:41 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 374570f0-fda4-4f8f-8c80-58682c901e53)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/google/mobilebert-uncased/1f90a6c24c7879273a291d34a849033eba2dbc0f/config.json
+2026-04-26T14:29:41 [WARNING ] huggingface_hub.utils._http: Retrying in 2s [Retry 2/5].
+2026-04-26T14:29:43 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 93ce1527-5b9d-41d2-bbcb-7cdd96dd35c9)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/google/mobilebert-uncased/1f90a6c24c7879273a291d34a849033eba2dbc0f/config.json
+2026-04-26T14:29:43 [WARNING ] huggingface_hub.utils._http: Retrying in 4s [Retry 3/5].
+2026-04-26T14:29:47 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: a9032bef-1d86-4fee-89a7-ae5d8a5f0eb5)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/google/mobilebert-uncased/1f90a6c24c7879273a291d34a849033eba2dbc0f/config.json
+2026-04-26T14:29:47 [WARNING ] huggingface_hub.utils._http: Retrying in 8s [Retry 4/5].
+2026-04-26T14:29:55 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: c97c3c70-f17e-46dc-b7f2-6c16e21f4645)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/google/mobilebert-uncased/1f90a6c24c7879273a291d34a849033eba2dbc0f/config.json
+2026-04-26T14:29:55 [WARNING ] huggingface_hub.utils._http: Retrying in 8s [Retry 5/5].
+2026-04-26T14:30:04 [INFO    ] benchmark.models.model_mobilebert: MobileBERT loaded on cuda
+2026-04-26T14:30:04 [INFO    ] benchmark.runner:   Load complete in 30770.74 ms
+2026-04-26T14:30:05 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T14:30:05 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 98.97 ms
+2026-04-26T14:30:06 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T14:30:27 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T14:30:27 [INFO    ] benchmark.runner:   Done | 1st-call=98.97 ms | mean=20.30 ms | p95=21.54 ms | kernel=20.27 ms | status=success
+2026-04-26T14:30:27 [INFO    ] run_one_model: Process exit | status=success
+2026-04-26T15:50:07 [INFO    ] run_one_model: Process start | pid=20952 | model_id=5 | trial_id=0
+2026-04-26T15:50:07 [INFO    ] benchmark.runner: Trial 0 | Model 5 (mobilebert) | Framework: pytorch
+2026-04-26T15:50:11 [INFO    ] benchmark.models.model_mobilebert: Loading google/mobilebert-uncased on cuda …
+2026-04-26T15:50:11 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 6ca47056-b00b-4352-bdc4-df95ec6088c8)')' thrown while requesting HEAD https://huggingface.co/google/mobilebert-uncased/resolve/main/config.json
+2026-04-26T15:50:11 [WARNING ] huggingface_hub.utils._http: Retrying in 1s [Retry 1/5].
+2026-04-26T15:50:13 [INFO    ] benchmark.models.model_mobilebert: MobileBERT loaded on cuda
+2026-04-26T15:50:13 [INFO    ] benchmark.runner:   Load complete in 5559.38 ms
+2026-04-26T15:50:13 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T15:50:14 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 110.13 ms
+2026-04-26T15:50:15 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T15:50:38 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T15:50:38 [INFO    ] benchmark.runner:   Done | 1st-call=110.13 ms | mean=22.54 ms | p95=27.87 ms | kernel=22.50 ms | status=success
+2026-04-26T15:50:38 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T02:29:47 [INFO    ] run_one_model: Process start | pid=23724 | model_id=5 | trial_id=0
+2026-04-27T02:29:47 [INFO    ] benchmark.runner: Trial 0 | Model 5 (mobilebert) | Framework: pytorch
+2026-04-27T02:29:51 [INFO    ] benchmark.models.model_mobilebert: Loading google/mobilebert-uncased on cuda …
+2026-04-27T02:29:52 [INFO    ] benchmark.models.model_mobilebert: MobileBERT loaded on cuda
+2026-04-27T02:29:52 [INFO    ] benchmark.runner:   Load complete in 5267.15 ms
+2026-04-27T02:29:53 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T02:29:53 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 114.26 ms
+2026-04-27T02:29:54 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T02:30:21 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T02:30:21 [INFO    ] benchmark.runner:   Done | 1st-call=114.26 ms | mean=25.87 ms | p95=33.43 ms | kernel=25.83 ms | status=success
+2026-04-27T02:30:21 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T02:54:10 [INFO    ] run_one_model: Process start | pid=34776 | model_id=5 | trial_id=0
+2026-04-27T02:54:10 [INFO    ] benchmark.runner: Trial 0 | Model 5 (mobilebert) | Framework: pytorch
+2026-04-27T02:54:14 [INFO    ] benchmark.models.model_mobilebert: Loading google/mobilebert-uncased on cuda …
+2026-04-27T02:54:14 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 6cc820b1-e789-4b47-bbe7-c2cf6c3f1ee2)')' thrown while requesting HEAD https://huggingface.co/google/mobilebert-uncased/resolve/main/config.json
+2026-04-27T02:54:14 [WARNING ] huggingface_hub.utils._http: Retrying in 1s [Retry 1/5].
+2026-04-27T02:54:15 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: f973b56f-c7ec-44ce-b8fc-45b28ba2649e)')' thrown while requesting HEAD https://huggingface.co/google/mobilebert-uncased/resolve/main/config.json
+2026-04-27T02:54:15 [WARNING ] huggingface_hub.utils._http: Retrying in 2s [Retry 2/5].
+2026-04-27T02:54:17 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: d45a7b54-5086-464d-bca9-c973694c11a7)')' thrown while requesting HEAD https://huggingface.co/google/mobilebert-uncased/resolve/main/config.json
+2026-04-27T02:54:17 [WARNING ] huggingface_hub.utils._http: Retrying in 4s [Retry 3/5].
+2026-04-27T02:54:21 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 5ae041fb-ba3e-4170-be53-f0593bc75225)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/google/mobilebert-uncased/1f90a6c24c7879273a291d34a849033eba2dbc0f/config.json
+2026-04-27T02:54:21 [WARNING ] huggingface_hub.utils._http: Retrying in 1s [Retry 1/5].
+2026-04-27T02:54:22 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 35032695-7edf-47ea-bf09-006de29f9a3f)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/google/mobilebert-uncased/1f90a6c24c7879273a291d34a849033eba2dbc0f/config.json
+2026-04-27T02:54:22 [WARNING ] huggingface_hub.utils._http: Retrying in 2s [Retry 2/5].
+2026-04-27T02:54:25 [INFO    ] benchmark.models.model_mobilebert: MobileBERT loaded on cuda
+2026-04-27T02:54:25 [INFO    ] benchmark.runner:   Load complete in 14914.47 ms
+2026-04-27T02:54:25 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T02:54:25 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 110.78 ms
+2026-04-27T02:54:26 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T02:54:48 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T02:54:48 [INFO    ] benchmark.runner:   Done | 1st-call=110.78 ms | mean=21.34 ms | p95=22.51 ms | kernel=21.28 ms | status=success
+2026-04-27T02:54:48 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T03:29:58 [INFO    ] run_one_model: Process start | pid=33604 | model_id=5 | trial_id=0
+2026-04-27T03:29:58 [INFO    ] benchmark.runner: Trial 0 | Model 5 (mobilebert) | Framework: pytorch
+2026-04-27T03:30:02 [INFO    ] benchmark.models.model_mobilebert: Loading google/mobilebert-uncased on cuda …
+2026-04-27T03:30:03 [INFO    ] benchmark.models.model_mobilebert: MobileBERT loaded on cuda
+2026-04-27T03:30:03 [INFO    ] benchmark.runner:   Load complete in 4670.13 ms
+2026-04-27T03:30:03 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T03:30:04 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 119.78 ms
+2026-04-27T03:30:05 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T03:30:30 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T03:30:30 [INFO    ] benchmark.runner:   Done | 1st-call=119.78 ms | mean=24.37 ms | p95=32.95 ms | kernel=24.33 ms | status=success
+2026-04-27T03:30:30 [INFO    ] run_one_model: Process exit | status=success

@@ -1,0 +1,66 @@
+2026-04-26T13:50:39 [INFO    ] run_one_model: Process start | pid=13236 | model_id=9 | trial_id=3
+2026-04-26T13:50:39 [INFO    ] benchmark.runner: Trial 3 | Model 9 (posenet) | Framework: mediapipe
+2026-04-26T13:50:43 [INFO    ] benchmark.models.model_posenet: pose_landmarker_lite.task already cached at C:\Users\fanaf\Desktop\Native\native_tfjs_bench\benchmark\models\_mediapipe_assets\pose_landmarker_lite.task
+2026-04-26T13:50:43 [INFO    ] benchmark.models.model_posenet: PoseLandmarker-Lite loaded (CPU inference)
+2026-04-26T13:50:43 [INFO    ] benchmark.runner:   Load complete in 3296.38 ms
+2026-04-26T13:50:43 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T13:50:43 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 23.52 ms
+2026-04-26T13:50:44 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T13:50:54 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T13:50:54 [INFO    ] benchmark.runner:   Done | 1st-call=23.52 ms | mean=9.17 ms | p95=9.53 ms | kernel=9.11 ms | status=success
+2026-04-26T13:50:54 [INFO    ] run_one_model: Process exit | status=success
+2026-04-26T14:34:17 [INFO    ] run_one_model: Process start | pid=31636 | model_id=9 | trial_id=3
+2026-04-26T14:34:17 [INFO    ] benchmark.runner: Trial 3 | Model 9 (posenet) | Framework: mediapipe
+2026-04-26T14:34:20 [INFO    ] benchmark.models.model_posenet: pose_landmarker_lite.task already cached at C:\Users\fanaf\Desktop\Native\native_tfjs_bench\benchmark\models\_mediapipe_assets\pose_landmarker_lite.task
+2026-04-26T14:34:20 [INFO    ] benchmark.models.model_posenet: PoseLandmarker-Lite loaded (CPU inference)
+2026-04-26T14:34:20 [INFO    ] benchmark.runner:   Load complete in 3056.94 ms
+2026-04-26T14:34:21 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T14:34:21 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 21.96 ms
+2026-04-26T14:34:22 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T14:34:31 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T14:34:31 [INFO    ] benchmark.runner:   Done | 1st-call=21.96 ms | mean=8.49 ms | p95=8.78 ms | kernel=8.44 ms | status=success
+2026-04-26T14:34:31 [INFO    ] run_one_model: Process exit | status=success
+2026-04-26T15:54:45 [INFO    ] run_one_model: Process start | pid=532 | model_id=9 | trial_id=3
+2026-04-26T15:54:45 [INFO    ] benchmark.runner: Trial 3 | Model 9 (posenet) | Framework: mediapipe
+2026-04-26T15:54:48 [INFO    ] benchmark.models.model_posenet: pose_landmarker_lite.task already cached at C:\Users\fanaf\Desktop\Native\native_tfjs_bench\benchmark\models\_mediapipe_assets\pose_landmarker_lite.task
+2026-04-26T15:54:48 [INFO    ] benchmark.models.model_posenet: PoseLandmarker-Lite loaded (CPU inference)
+2026-04-26T15:54:48 [INFO    ] benchmark.runner:   Load complete in 3072.53 ms
+2026-04-26T15:54:49 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T15:54:49 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 22.14 ms
+2026-04-26T15:54:50 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T15:54:59 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T15:54:59 [INFO    ] benchmark.runner:   Done | 1st-call=22.14 ms | mean=8.51 ms | p95=8.83 ms | kernel=8.46 ms | status=success
+2026-04-26T15:54:59 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T02:34:36 [INFO    ] run_one_model: Process start | pid=40504 | model_id=9 | trial_id=3
+2026-04-27T02:34:36 [INFO    ] benchmark.runner: Trial 3 | Model 9 (posenet) | Framework: mediapipe
+2026-04-27T02:34:39 [INFO    ] benchmark.models.model_posenet: pose_landmarker_lite.task already cached at C:\Users\fanaf\Desktop\Native\native_tfjs_bench\benchmark\models\_mediapipe_assets\pose_landmarker_lite.task
+2026-04-27T02:34:40 [INFO    ] benchmark.models.model_posenet: PoseLandmarker-Lite loaded (CPU inference)
+2026-04-27T02:34:40 [INFO    ] benchmark.runner:   Load complete in 3064.17 ms
+2026-04-27T02:34:40 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T02:34:40 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 22.19 ms
+2026-04-27T02:34:41 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T02:34:50 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T02:34:50 [INFO    ] benchmark.runner:   Done | 1st-call=22.19 ms | mean=8.49 ms | p95=8.83 ms | kernel=8.44 ms | status=success
+2026-04-27T02:34:50 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T02:59:23 [INFO    ] run_one_model: Process start | pid=32620 | model_id=9 | trial_id=3
+2026-04-27T02:59:23 [INFO    ] benchmark.runner: Trial 3 | Model 9 (posenet) | Framework: mediapipe
+2026-04-27T02:59:26 [INFO    ] benchmark.models.model_posenet: pose_landmarker_lite.task already cached at C:\Users\fanaf\Desktop\Native\native_tfjs_bench\benchmark\models\_mediapipe_assets\pose_landmarker_lite.task
+2026-04-27T02:59:26 [INFO    ] benchmark.models.model_posenet: PoseLandmarker-Lite loaded (CPU inference)
+2026-04-27T02:59:26 [INFO    ] benchmark.runner:   Load complete in 3084.32 ms
+2026-04-27T02:59:26 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T02:59:26 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 22.44 ms
+2026-04-27T02:59:27 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T02:59:36 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T02:59:36 [INFO    ] benchmark.runner:   Done | 1st-call=22.44 ms | mean=8.51 ms | p95=9.10 ms | kernel=8.47 ms | status=success
+2026-04-27T02:59:36 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T03:35:21 [INFO    ] run_one_model: Process start | pid=21804 | model_id=9 | trial_id=3
+2026-04-27T03:35:21 [INFO    ] benchmark.runner: Trial 3 | Model 9 (posenet) | Framework: mediapipe
+2026-04-27T03:35:24 [INFO    ] benchmark.models.model_posenet: pose_landmarker_lite.task already cached at C:\Users\fanaf\Desktop\Native\native_tfjs_bench\benchmark\models\_mediapipe_assets\pose_landmarker_lite.task
+2026-04-27T03:35:24 [INFO    ] benchmark.models.model_posenet: PoseLandmarker-Lite loaded (CPU inference)
+2026-04-27T03:35:24 [INFO    ] benchmark.runner:   Load complete in 3061.94 ms
+2026-04-27T03:35:25 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T03:35:25 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 22.24 ms
+2026-04-27T03:35:26 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T03:35:35 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T03:35:35 [INFO    ] benchmark.runner:   Done | 1st-call=22.24 ms | mean=8.54 ms | p95=8.84 ms | kernel=8.50 ms | status=success
+2026-04-27T03:35:35 [INFO    ] run_one_model: Process exit | status=success

@@ -58,7 +58,8 @@ DEFAULT_NUM_TRIALS = 5
 DEFAULT_WARMUP_ITERS = 10
 DEFAULT_MEASURED_ITERS = 1024
 DEFAULT_SEED = 12345
-DEFAULT_TIMEOUT_S = 600  # 10 minutes per trial subprocess
+DEFAULT_TIMEOUT_S = 600          # 10 minutes per trial subprocess
+DEFAULT_INTER_TRIAL_COOLDOWN_S = 3.0  # seconds between consecutive trials
 
 
 # ── ExperimentMode ───────────────────────────────────────────────────────────────────
@@ -199,17 +200,19 @@ class ExperimentConfig:
     random_seed:          int             = DEFAULT_SEED
     device:               str             = "cuda"
     timeout_s:            int             = DEFAULT_TIMEOUT_S
+    inter_trial_cooldown_s: float         = DEFAULT_INTER_TRIAL_COOLDOWN_S
     profiler_opts:        ProfilerOptions = field(default_factory=ProfilerOptions)
 
     def to_dict(self) -> dict:
         return {
-            "mode":                self.mode,
-            "num_trials":          self.num_trials,
-            "warmup_iterations":   self.warmup_iterations,
-            "measured_iterations": self.measured_iterations,
-            "random_seed":         self.random_seed,
-            "device":              self.device,
-            "timeout_s":           self.timeout_s,
+            "mode":                    self.mode,
+            "num_trials":              self.num_trials,
+            "warmup_iterations":       self.warmup_iterations,
+            "measured_iterations":     self.measured_iterations,
+            "random_seed":             self.random_seed,
+            "device":                  self.device,
+            "timeout_s":               self.timeout_s,
+            "inter_trial_cooldown_s":  self.inter_trial_cooldown_s,
             "profiler_opts": {
                 "profile_trials":           self.profiler_opts.profile_trials,
                 "profile_models":           self.profiler_opts.profile_models,
@@ -266,6 +269,7 @@ def run_model_trials(
     random_seed: int = DEFAULT_SEED,
     device: str = "cuda",
     timeout: int = DEFAULT_TIMEOUT_S,
+    inter_trial_cooldown_s: float = DEFAULT_INTER_TRIAL_COOLDOWN_S,
 ) -> list[TrialResult]:
     """
     Run all trials for a single model in independent fresh subprocesses.
@@ -274,15 +278,33 @@ def run_model_trials(
     Failed subprocesses are recorded as STATUS_FAILED and do not stop the
     remaining trials.
 
+    Inter-trial isolation
+    ---------------------
+    After each trial subprocess exits (except the last), an explicit isolation
+    phase runs in the parent process:
+
+      1. Completion barrier  — proc.communicate() has already drained all
+         subprocess I/O and confirmed the child has exited; the child's CUDA
+         context is fully destroyed by the OS at process exit.
+      2. Cooldown gap        — the parent sleeps for ``inter_trial_cooldown_s``
+         seconds, giving the GPU driver time to reclaim VRAM, the OS scheduler
+         time to drain any deferred cleanup work, and the thermal subsystem
+         partial time to recover before the next load spike.
+
+    This cooldown is applied *outside* the subprocess and therefore outside the
+    measured inference region — it never inflates reported latency.
+
     Args:
-        model_id:            Registry model ID (1–10).
-        output_base_dir:     Root directory for all output artefacts.
-        num_trials:          Number of independent trials (default 5).
-        warmup_iterations:   Warm-up iterations per trial (default 10).
-        measured_iterations: Measured iterations per trial (default 1024).
-        random_seed:         Seed forwarded to each subprocess.
-        device:              CUDA device string.
-        timeout:             Max seconds before a subprocess is declared failed.
+        model_id:                Registry model ID (1–10).
+        output_base_dir:         Root directory for all output artefacts.
+        num_trials:              Number of independent trials (default 5).
+        warmup_iterations:       Warm-up iterations per trial (default 10).
+        measured_iterations:     Measured iterations per trial (default 1024).
+        random_seed:             Seed forwarded to each subprocess.
+        device:                  CUDA device string.
+        timeout:                 Max seconds before a subprocess is declared failed.
+        inter_trial_cooldown_s:  Seconds to pause between consecutive trials
+                                 (default 3.0). Set to 0 to disable.
 
     Returns:
         List[TrialResult] of length num_trials (may contain failed entries).
@@ -311,6 +333,23 @@ def run_model_trials(
             trial_id, model_id, result.status, result.mean_inference_ms,
         )
 
+        # ── Inter-trial isolation phase ───────────────────────────────────
+        # Applied after every trial except the last to avoid a redundant
+        # delay at the end of the model's trial block.
+        is_last_trial = (trial_id == num_trials - 1)
+        if not is_last_trial and inter_trial_cooldown_s > 0:
+            logger.info(
+                "  [Inter-trial isolation] model_id=%d trial=%d→%d: "
+                "cooldown %.1fs — GPU driver reclaiming VRAM, "
+                "OS draining deferred cleanup, thermal settling.",
+                model_id, trial_id, trial_id + 1, inter_trial_cooldown_s,
+            )
+            time.sleep(inter_trial_cooldown_s)
+            logger.info(
+                "  [Inter-trial isolation] done — starting trial %d.",
+                trial_id + 1,
+            )
+
     return results
 
 
@@ -323,6 +362,7 @@ def run_all_model_trials(
     random_seed: int = DEFAULT_SEED,
     device: str = "cuda",
     timeout: int = DEFAULT_TIMEOUT_S,
+    inter_trial_cooldown_s: float = DEFAULT_INTER_TRIAL_COOLDOWN_S,
 ) -> dict[int, list[TrialResult]]:
     """
     Run trials for all specified models, one model at a time.
@@ -332,8 +372,10 @@ def run_all_model_trials(
     models continue uninterrupted.
 
     Args:
-        model_ids:  List of model IDs to benchmark.
-        ...         (see run_model_trials for remaining args)
+        model_ids:               List of model IDs to benchmark.
+        inter_trial_cooldown_s:  Forwarded to run_model_trials. See that
+                                 function's docstring for full description.
+        ...                      (see run_model_trials for remaining args)
 
     Returns:
         Dict mapping model_id → list[TrialResult].
@@ -355,6 +397,7 @@ def run_all_model_trials(
                 random_seed=random_seed,
                 device=device,
                 timeout=timeout,
+                inter_trial_cooldown_s=inter_trial_cooldown_s,
             )
         except Exception as exc:
             logger.error("Unexpected error for model_id=%d: %s", model_id, exc)
@@ -419,6 +462,7 @@ def run_experiment(
         random_seed=config.random_seed,
         device=config.device,
         timeout=config.timeout_s,
+        inter_trial_cooldown_s=config.inter_trial_cooldown_s,
     )
     for mid in model_ids:
         results[mid] = {

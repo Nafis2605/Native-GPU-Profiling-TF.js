@@ -1,0 +1,66 @@
+2026-04-26T13:40:56 [INFO    ] run_one_model: Process start | pid=34860 | model_id=4 | trial_id=2
+2026-04-26T13:40:56 [INFO    ] benchmark.runner: Trial 2 | Model 4 (coco_ssd) | Framework: pytorch
+2026-04-26T13:40:57 [INFO    ] benchmark.models.model_coco_ssd: Loading SSDLite320 MobileNetV3-Large on cuda …
+2026-04-26T13:40:58 [INFO    ] benchmark.models.model_coco_ssd: SSDLite320 MobileNetV3-Large loaded on cuda
+2026-04-26T13:40:58 [INFO    ] benchmark.runner:   Load complete in 1421.46 ms
+2026-04-26T13:40:58 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T13:40:58 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 370.10 ms
+2026-04-26T13:41:00 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T13:41:48 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T13:41:48 [INFO    ] benchmark.runner:   Done | 1st-call=370.10 ms | mean=47.55 ms | p95=48.84 ms | kernel=47.51 ms | status=success
+2026-04-26T13:41:48 [INFO    ] run_one_model: Process exit | status=success
+2026-04-26T14:26:57 [INFO    ] run_one_model: Process start | pid=34208 | model_id=4 | trial_id=2
+2026-04-26T14:26:57 [INFO    ] benchmark.runner: Trial 2 | Model 4 (coco_ssd) | Framework: pytorch
+2026-04-26T14:26:58 [INFO    ] benchmark.models.model_coco_ssd: Loading SSDLite320 MobileNetV3-Large on cuda …
+2026-04-26T14:26:59 [INFO    ] benchmark.models.model_coco_ssd: SSDLite320 MobileNetV3-Large loaded on cuda
+2026-04-26T14:26:59 [INFO    ] benchmark.runner:   Load complete in 1355.32 ms
+2026-04-26T14:26:59 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T14:27:00 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 396.83 ms
+2026-04-26T14:27:01 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T14:27:46 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T14:27:46 [INFO    ] benchmark.runner:   Done | 1st-call=396.83 ms | mean=44.10 ms | p95=49.58 ms | kernel=44.07 ms | status=success
+2026-04-26T14:27:46 [INFO    ] run_one_model: Process exit | status=success
+2026-04-26T15:47:27 [INFO    ] run_one_model: Process start | pid=37212 | model_id=4 | trial_id=2
+2026-04-26T15:47:27 [INFO    ] benchmark.runner: Trial 2 | Model 4 (coco_ssd) | Framework: pytorch
+2026-04-26T15:47:28 [INFO    ] benchmark.models.model_coco_ssd: Loading SSDLite320 MobileNetV3-Large on cuda …
+2026-04-26T15:47:28 [INFO    ] benchmark.models.model_coco_ssd: SSDLite320 MobileNetV3-Large loaded on cuda
+2026-04-26T15:47:28 [INFO    ] benchmark.runner:   Load complete in 1342.81 ms
+2026-04-26T15:47:29 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T15:47:29 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 350.60 ms
+2026-04-26T15:47:30 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T15:48:14 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T15:48:14 [INFO    ] benchmark.runner:   Done | 1st-call=350.60 ms | mean=42.43 ms | p95=43.36 ms | kernel=42.40 ms | status=success
+2026-04-26T15:48:14 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T02:27:11 [INFO    ] run_one_model: Process start | pid=10900 | model_id=4 | trial_id=2
+2026-04-27T02:27:11 [INFO    ] benchmark.runner: Trial 2 | Model 4 (coco_ssd) | Framework: pytorch
+2026-04-27T02:27:13 [INFO    ] benchmark.models.model_coco_ssd: Loading SSDLite320 MobileNetV3-Large on cuda …
+2026-04-27T02:27:13 [INFO    ] benchmark.models.model_coco_ssd: SSDLite320 MobileNetV3-Large loaded on cuda
+2026-04-27T02:27:13 [INFO    ] benchmark.runner:   Load complete in 1340.69 ms
+2026-04-27T02:27:13 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T02:27:14 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 372.32 ms
+2026-04-27T02:27:15 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T02:28:01 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T02:28:01 [INFO    ] benchmark.runner:   Done | 1st-call=372.32 ms | mean=45.04 ms | p95=52.28 ms | kernel=45.01 ms | status=success
+2026-04-27T02:28:01 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T02:51:37 [INFO    ] run_one_model: Process start | pid=22620 | model_id=4 | trial_id=2
+2026-04-27T02:51:37 [INFO    ] benchmark.runner: Trial 2 | Model 4 (coco_ssd) | Framework: pytorch
+2026-04-27T02:51:39 [INFO    ] benchmark.models.model_coco_ssd: Loading SSDLite320 MobileNetV3-Large on cuda …
+2026-04-27T02:51:39 [INFO    ] benchmark.models.model_coco_ssd: SSDLite320 MobileNetV3-Large loaded on cuda
+2026-04-27T02:51:39 [INFO    ] benchmark.runner:   Load complete in 1340.45 ms
+2026-04-27T02:51:39 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T02:51:40 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 363.81 ms
+2026-04-27T02:51:41 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T02:52:22 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T02:52:22 [INFO    ] benchmark.runner:   Done | 1st-call=363.81 ms | mean=40.47 ms | p95=43.51 ms | kernel=40.43 ms | status=success
+2026-04-27T02:52:22 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T03:27:25 [INFO    ] run_one_model: Process start | pid=19448 | model_id=4 | trial_id=2
+2026-04-27T03:27:25 [INFO    ] benchmark.runner: Trial 2 | Model 4 (coco_ssd) | Framework: pytorch
+2026-04-27T03:27:26 [INFO    ] benchmark.models.model_coco_ssd: Loading SSDLite320 MobileNetV3-Large on cuda …
+2026-04-27T03:27:26 [INFO    ] benchmark.models.model_coco_ssd: SSDLite320 MobileNetV3-Large loaded on cuda
+2026-04-27T03:27:26 [INFO    ] benchmark.runner:   Load complete in 1333.21 ms
+2026-04-27T03:27:27 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T03:27:27 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 353.48 ms
+2026-04-27T03:27:28 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T03:28:12 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T03:28:12 [INFO    ] benchmark.runner:   Done | 1st-call=353.48 ms | mean=42.79 ms | p95=44.51 ms | kernel=42.76 ms | status=success
+2026-04-27T03:28:12 [INFO    ] run_one_model: Process exit | status=success

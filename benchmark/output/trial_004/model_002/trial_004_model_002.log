@@ -1,0 +1,66 @@
+2026-04-26T13:38:09 [INFO    ] run_one_model: Process start | pid=34084 | model_id=2 | trial_id=4
+2026-04-26T13:38:09 [INFO    ] benchmark.runner: Trial 4 | Model 2 (hand_pose_3d) | Framework: mediapipe
+2026-04-26T13:38:12 [INFO    ] benchmark.models.model_hand_pose_3d: hand_landmarker.task already cached at C:\Users\fanaf\Desktop\Native\native_tfjs_bench\benchmark\models\_mediapipe_assets\hand_landmarker.task
+2026-04-26T13:38:12 [INFO    ] benchmark.models.model_hand_pose_3d: HandLandmarker loaded (CPU inference)
+2026-04-26T13:38:12 [INFO    ] benchmark.runner:   Load complete in 3250.69 ms
+2026-04-26T13:38:13 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T13:38:13 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 22.97 ms
+2026-04-26T13:38:14 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T13:38:23 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T13:38:24 [INFO    ] benchmark.runner:   Done | 1st-call=22.97 ms | mean=8.99 ms | p95=9.27 ms | kernel=8.93 ms | status=success
+2026-04-26T13:38:24 [INFO    ] run_one_model: Process exit | status=success
+2026-04-26T14:24:19 [INFO    ] run_one_model: Process start | pid=17576 | model_id=2 | trial_id=4
+2026-04-26T14:24:19 [INFO    ] benchmark.runner: Trial 4 | Model 2 (hand_pose_3d) | Framework: mediapipe
+2026-04-26T14:24:22 [INFO    ] benchmark.models.model_hand_pose_3d: hand_landmarker.task already cached at C:\Users\fanaf\Desktop\Native\native_tfjs_bench\benchmark\models\_mediapipe_assets\hand_landmarker.task
+2026-04-26T14:24:22 [INFO    ] benchmark.models.model_hand_pose_3d: HandLandmarker loaded (CPU inference)
+2026-04-26T14:24:22 [INFO    ] benchmark.runner:   Load complete in 3096.27 ms
+2026-04-26T14:24:23 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T14:24:23 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 23.82 ms
+2026-04-26T14:24:24 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T14:24:32 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T14:24:32 [INFO    ] benchmark.runner:   Done | 1st-call=23.82 ms | mean=8.51 ms | p95=8.86 ms | kernel=8.44 ms | status=success
+2026-04-26T14:24:32 [INFO    ] run_one_model: Process exit | status=success
+2026-04-26T15:44:55 [INFO    ] run_one_model: Process start | pid=19288 | model_id=2 | trial_id=4
+2026-04-26T15:44:55 [INFO    ] benchmark.runner: Trial 4 | Model 2 (hand_pose_3d) | Framework: mediapipe
+2026-04-26T15:44:58 [INFO    ] benchmark.models.model_hand_pose_3d: hand_landmarker.task already cached at C:\Users\fanaf\Desktop\Native\native_tfjs_bench\benchmark\models\_mediapipe_assets\hand_landmarker.task
+2026-04-26T15:44:58 [INFO    ] benchmark.models.model_hand_pose_3d: HandLandmarker loaded (CPU inference)
+2026-04-26T15:44:58 [INFO    ] benchmark.runner:   Load complete in 2998.81 ms
+2026-04-26T15:44:59 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T15:44:59 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 21.78 ms
+2026-04-26T15:45:00 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T15:45:09 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T15:45:09 [INFO    ] benchmark.runner:   Done | 1st-call=21.78 ms | mean=8.46 ms | p95=8.78 ms | kernel=8.40 ms | status=success
+2026-04-26T15:45:09 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T02:24:34 [INFO    ] run_one_model: Process start | pid=37116 | model_id=2 | trial_id=4
+2026-04-27T02:24:34 [INFO    ] benchmark.runner: Trial 4 | Model 2 (hand_pose_3d) | Framework: mediapipe
+2026-04-27T02:24:37 [INFO    ] benchmark.models.model_hand_pose_3d: hand_landmarker.task already cached at C:\Users\fanaf\Desktop\Native\native_tfjs_bench\benchmark\models\_mediapipe_assets\hand_landmarker.task
+2026-04-27T02:24:37 [INFO    ] benchmark.models.model_hand_pose_3d: HandLandmarker loaded (CPU inference)
+2026-04-27T02:24:37 [INFO    ] benchmark.runner:   Load complete in 3041.20 ms
+2026-04-27T02:24:38 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T02:24:38 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 21.95 ms
+2026-04-27T02:24:39 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T02:24:47 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T02:24:47 [INFO    ] benchmark.runner:   Done | 1st-call=21.95 ms | mean=8.44 ms | p95=8.85 ms | kernel=8.37 ms | status=success
+2026-04-27T02:24:47 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T02:49:09 [INFO    ] run_one_model: Process start | pid=25232 | model_id=2 | trial_id=4
+2026-04-27T02:49:09 [INFO    ] benchmark.runner: Trial 4 | Model 2 (hand_pose_3d) | Framework: mediapipe
+2026-04-27T02:49:12 [INFO    ] benchmark.models.model_hand_pose_3d: hand_landmarker.task already cached at C:\Users\fanaf\Desktop\Native\native_tfjs_bench\benchmark\models\_mediapipe_assets\hand_landmarker.task
+2026-04-27T02:49:12 [INFO    ] benchmark.models.model_hand_pose_3d: HandLandmarker loaded (CPU inference)
+2026-04-27T02:49:12 [INFO    ] benchmark.runner:   Load complete in 3102.55 ms
+2026-04-27T02:49:13 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T02:49:13 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 21.85 ms
+2026-04-27T02:49:14 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T02:49:23 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T02:49:23 [INFO    ] benchmark.runner:   Done | 1st-call=21.85 ms | mean=8.61 ms | p95=9.13 ms | kernel=8.56 ms | status=success
+2026-04-27T02:49:23 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T03:24:51 [INFO    ] run_one_model: Process start | pid=15252 | model_id=2 | trial_id=4
+2026-04-27T03:24:51 [INFO    ] benchmark.runner: Trial 4 | Model 2 (hand_pose_3d) | Framework: mediapipe
+2026-04-27T03:24:54 [INFO    ] benchmark.models.model_hand_pose_3d: hand_landmarker.task already cached at C:\Users\fanaf\Desktop\Native\native_tfjs_bench\benchmark\models\_mediapipe_assets\hand_landmarker.task
+2026-04-27T03:24:54 [INFO    ] benchmark.models.model_hand_pose_3d: HandLandmarker loaded (CPU inference)
+2026-04-27T03:24:54 [INFO    ] benchmark.runner:   Load complete in 3027.53 ms
+2026-04-27T03:24:54 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T03:24:55 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 22.51 ms
+2026-04-27T03:24:56 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T03:25:05 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T03:25:05 [INFO    ] benchmark.runner:   Done | 1st-call=22.51 ms | mean=8.46 ms | p95=8.72 ms | kernel=8.39 ms | status=success
+2026-04-27T03:25:05 [INFO    ] run_one_model: Process exit | status=success

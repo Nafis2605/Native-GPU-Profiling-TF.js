@@ -1,0 +1,66 @@
+2026-04-26T13:35:54 [INFO    ] run_one_model: Process start | pid=36160 | model_id=1 | trial_id=1
+2026-04-26T13:35:54 [INFO    ] benchmark.runner: Trial 1 | Model 1 (selfie_segmentation) | Framework: pytorch
+2026-04-26T13:35:55 [INFO    ] benchmark.models.model_selfie_segmentation: Loading LRASPP MobileNetV3-Large on cuda …
+2026-04-26T13:35:56 [INFO    ] benchmark.models.model_selfie_segmentation: LRASPP MobileNetV3-Large loaded on cuda
+2026-04-26T13:35:56 [INFO    ] benchmark.runner:   Load complete in 1402.61 ms
+2026-04-26T13:35:56 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T13:35:56 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 193.35 ms
+2026-04-26T13:35:57 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T13:36:02 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T13:36:09 [INFO    ] benchmark.runner:   Done | 1st-call=193.35 ms | mean=4.71 ms | p95=6.76 ms | kernel=4.67 ms | status=success
+2026-04-26T13:36:09 [INFO    ] run_one_model: Process exit | status=success
+2026-04-26T14:22:22 [INFO    ] run_one_model: Process start | pid=40520 | model_id=1 | trial_id=1
+2026-04-26T14:22:22 [INFO    ] benchmark.runner: Trial 1 | Model 1 (selfie_segmentation) | Framework: pytorch
+2026-04-26T14:22:23 [INFO    ] benchmark.models.model_selfie_segmentation: Loading LRASPP MobileNetV3-Large on cuda …
+2026-04-26T14:22:23 [INFO    ] benchmark.models.model_selfie_segmentation: LRASPP MobileNetV3-Large loaded on cuda
+2026-04-26T14:22:23 [INFO    ] benchmark.runner:   Load complete in 1289.34 ms
+2026-04-26T14:22:24 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T14:22:24 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 190.52 ms
+2026-04-26T14:22:25 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T14:22:29 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T14:22:29 [INFO    ] benchmark.runner:   Done | 1st-call=190.52 ms | mean=3.90 ms | p95=5.71 ms | kernel=3.87 ms | status=success
+2026-04-26T14:22:29 [INFO    ] run_one_model: Process exit | status=success
+2026-04-26T15:42:54 [INFO    ] run_one_model: Process start | pid=25572 | model_id=1 | trial_id=1
+2026-04-26T15:42:54 [INFO    ] benchmark.runner: Trial 1 | Model 1 (selfie_segmentation) | Framework: pytorch
+2026-04-26T15:42:55 [INFO    ] benchmark.models.model_selfie_segmentation: Loading LRASPP MobileNetV3-Large on cuda …
+2026-04-26T15:42:55 [INFO    ] benchmark.models.model_selfie_segmentation: LRASPP MobileNetV3-Large loaded on cuda
+2026-04-26T15:42:55 [INFO    ] benchmark.runner:   Load complete in 1296.42 ms
+2026-04-26T15:42:56 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T15:42:56 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 187.33 ms
+2026-04-26T15:42:59 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T15:43:03 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T15:43:04 [INFO    ] benchmark.runner:   Done | 1st-call=187.33 ms | mean=4.14 ms | p95=6.25 ms | kernel=4.11 ms | status=success
+2026-04-26T15:43:04 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T02:22:36 [INFO    ] run_one_model: Process start | pid=29688 | model_id=1 | trial_id=1
+2026-04-27T02:22:36 [INFO    ] benchmark.runner: Trial 1 | Model 1 (selfie_segmentation) | Framework: pytorch
+2026-04-27T02:22:37 [INFO    ] benchmark.models.model_selfie_segmentation: Loading LRASPP MobileNetV3-Large on cuda …
+2026-04-27T02:22:38 [INFO    ] benchmark.models.model_selfie_segmentation: LRASPP MobileNetV3-Large loaded on cuda
+2026-04-27T02:22:38 [INFO    ] benchmark.runner:   Load complete in 1307.26 ms
+2026-04-27T02:22:38 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T02:22:39 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 200.33 ms
+2026-04-27T02:22:40 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T02:22:44 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T02:22:44 [INFO    ] benchmark.runner:   Done | 1st-call=200.33 ms | mean=3.98 ms | p95=5.57 ms | kernel=3.95 ms | status=success
+2026-04-27T02:22:44 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T02:47:12 [INFO    ] run_one_model: Process start | pid=24032 | model_id=1 | trial_id=1
+2026-04-27T02:47:12 [INFO    ] benchmark.runner: Trial 1 | Model 1 (selfie_segmentation) | Framework: pytorch
+2026-04-27T02:47:13 [INFO    ] benchmark.models.model_selfie_segmentation: Loading LRASPP MobileNetV3-Large on cuda …
+2026-04-27T02:47:13 [INFO    ] benchmark.models.model_selfie_segmentation: LRASPP MobileNetV3-Large loaded on cuda
+2026-04-27T02:47:13 [INFO    ] benchmark.runner:   Load complete in 1366.35 ms
+2026-04-27T02:47:14 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T02:47:14 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 191.42 ms
+2026-04-27T02:47:15 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T02:47:18 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T02:47:18 [INFO    ] benchmark.runner:   Done | 1st-call=191.42 ms | mean=3.30 ms | p95=3.56 ms | kernel=3.27 ms | status=success
+2026-04-27T02:47:18 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T03:22:53 [INFO    ] run_one_model: Process start | pid=30992 | model_id=1 | trial_id=1
+2026-04-27T03:22:53 [INFO    ] benchmark.runner: Trial 1 | Model 1 (selfie_segmentation) | Framework: pytorch
+2026-04-27T03:22:54 [INFO    ] benchmark.models.model_selfie_segmentation: Loading LRASPP MobileNetV3-Large on cuda …
+2026-04-27T03:22:54 [INFO    ] benchmark.models.model_selfie_segmentation: LRASPP MobileNetV3-Large loaded on cuda
+2026-04-27T03:22:54 [INFO    ] benchmark.runner:   Load complete in 1310.22 ms
+2026-04-27T03:22:55 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T03:22:55 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 201.21 ms
+2026-04-27T03:22:56 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T03:23:00 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T03:23:00 [INFO    ] benchmark.runner:   Done | 1st-call=201.21 ms | mean=3.71 ms | p95=4.15 ms | kernel=3.69 ms | status=success
+2026-04-27T03:23:00 [INFO    ] run_one_model: Process exit | status=success

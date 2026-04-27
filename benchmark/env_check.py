@@ -208,7 +208,7 @@ def _check_onnxruntime(report: EnvReport) -> None:
             )
     except ImportError:
         report.warnings.append(
-            "onnxruntime is not installed (required for 7 of 10 models). "
+            "onnxruntime is not installed (required for 6 of 8 enabled models). "
             "Install via: pip install onnxruntime-gpu"
         )
 

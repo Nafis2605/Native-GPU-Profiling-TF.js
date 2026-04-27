@@ -222,6 +222,7 @@ def run_all(
         random_seed=trial_cfg.get("random_seed", 12345),
         device=device,
         timeout_s=trial_cfg.get("timeout_seconds_per_trial", 600),
+        inter_trial_cooldown_s=trial_cfg.get("inter_trial_cooldown_s", 3.0),
         profiler_opts=opts,
     )
 

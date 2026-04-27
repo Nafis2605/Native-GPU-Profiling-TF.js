@@ -1,0 +1,66 @@
+2026-04-26T13:51:31 [INFO    ] run_one_model: Process start | pid=40824 | model_id=10 | trial_id=1
+2026-04-26T13:51:31 [INFO    ] benchmark.runner: Trial 1 | Model 10 (deeplabv3) | Framework: pytorch
+2026-04-26T13:51:32 [INFO    ] benchmark.models.model_deeplabv3: Loading DeepLabV3 MobileNetV3-Large on cuda …
+2026-04-26T13:51:32 [INFO    ] benchmark.models.model_deeplabv3: DeepLabV3 MobileNetV3-Large loaded on cuda
+2026-04-26T13:51:32 [INFO    ] benchmark.runner:   Load complete in 1397.68 ms
+2026-04-26T13:51:33 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T13:51:33 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 231.83 ms
+2026-04-26T13:51:34 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T13:51:41 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T13:51:41 [INFO    ] benchmark.runner:   Done | 1st-call=231.83 ms | mean=7.34 ms | p95=7.79 ms | kernel=7.28 ms | status=success
+2026-04-26T13:51:41 [INFO    ] run_one_model: Process exit | status=success
+2026-04-26T14:35:07 [INFO    ] run_one_model: Process start | pid=30120 | model_id=10 | trial_id=1
+2026-04-26T14:35:07 [INFO    ] benchmark.runner: Trial 1 | Model 10 (deeplabv3) | Framework: pytorch
+2026-04-26T14:35:08 [INFO    ] benchmark.models.model_deeplabv3: Loading DeepLabV3 MobileNetV3-Large on cuda …
+2026-04-26T14:35:08 [INFO    ] benchmark.models.model_deeplabv3: DeepLabV3 MobileNetV3-Large loaded on cuda
+2026-04-26T14:35:08 [INFO    ] benchmark.runner:   Load complete in 1334.09 ms
+2026-04-26T14:35:09 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T14:35:09 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 224.15 ms
+2026-04-26T14:35:10 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T14:35:18 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T14:35:18 [INFO    ] benchmark.runner:   Done | 1st-call=224.15 ms | mean=7.21 ms | p95=8.70 ms | kernel=7.17 ms | status=success
+2026-04-26T14:35:18 [INFO    ] run_one_model: Process exit | status=success
+2026-04-26T15:55:33 [INFO    ] run_one_model: Process start | pid=33796 | model_id=10 | trial_id=1
+2026-04-26T15:55:33 [INFO    ] benchmark.runner: Trial 1 | Model 10 (deeplabv3) | Framework: pytorch
+2026-04-26T15:55:35 [INFO    ] benchmark.models.model_deeplabv3: Loading DeepLabV3 MobileNetV3-Large on cuda …
+2026-04-26T15:55:35 [INFO    ] benchmark.models.model_deeplabv3: DeepLabV3 MobileNetV3-Large loaded on cuda
+2026-04-26T15:55:35 [INFO    ] benchmark.runner:   Load complete in 1345.40 ms
+2026-04-26T15:55:35 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T15:55:36 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 219.26 ms
+2026-04-26T15:55:37 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T15:55:44 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T15:55:44 [INFO    ] benchmark.runner:   Done | 1st-call=219.26 ms | mean=6.71 ms | p95=6.96 ms | kernel=6.67 ms | status=success
+2026-04-26T15:55:44 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T02:35:25 [INFO    ] run_one_model: Process start | pid=5144 | model_id=10 | trial_id=1
+2026-04-27T02:35:25 [INFO    ] benchmark.runner: Trial 1 | Model 10 (deeplabv3) | Framework: pytorch
+2026-04-27T02:35:26 [INFO    ] benchmark.models.model_deeplabv3: Loading DeepLabV3 MobileNetV3-Large on cuda …
+2026-04-27T02:35:26 [INFO    ] benchmark.models.model_deeplabv3: DeepLabV3 MobileNetV3-Large loaded on cuda
+2026-04-27T02:35:26 [INFO    ] benchmark.runner:   Load complete in 1384.85 ms
+2026-04-27T02:35:27 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T02:35:27 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 222.71 ms
+2026-04-27T02:35:28 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T02:35:35 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T02:35:35 [INFO    ] benchmark.runner:   Done | 1st-call=222.71 ms | mean=6.76 ms | p95=7.19 ms | kernel=6.72 ms | status=success
+2026-04-27T02:35:35 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T03:00:11 [INFO    ] run_one_model: Process start | pid=6400 | model_id=10 | trial_id=1
+2026-04-27T03:00:11 [INFO    ] benchmark.runner: Trial 1 | Model 10 (deeplabv3) | Framework: pytorch
+2026-04-27T03:00:13 [INFO    ] benchmark.models.model_deeplabv3: Loading DeepLabV3 MobileNetV3-Large on cuda …
+2026-04-27T03:00:13 [INFO    ] benchmark.models.model_deeplabv3: DeepLabV3 MobileNetV3-Large loaded on cuda
+2026-04-27T03:00:13 [INFO    ] benchmark.runner:   Load complete in 1369.15 ms
+2026-04-27T03:00:13 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T03:00:14 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 220.85 ms
+2026-04-27T03:00:15 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T03:00:22 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T03:00:22 [INFO    ] benchmark.runner:   Done | 1st-call=220.85 ms | mean=7.35 ms | p95=8.70 ms | kernel=7.30 ms | status=success
+2026-04-27T03:00:22 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T03:36:10 [INFO    ] run_one_model: Process start | pid=14332 | model_id=10 | trial_id=1
+2026-04-27T03:36:10 [INFO    ] benchmark.runner: Trial 1 | Model 10 (deeplabv3) | Framework: pytorch
+2026-04-27T03:36:11 [INFO    ] benchmark.models.model_deeplabv3: Loading DeepLabV3 MobileNetV3-Large on cuda …
+2026-04-27T03:36:11 [INFO    ] benchmark.models.model_deeplabv3: DeepLabV3 MobileNetV3-Large loaded on cuda
+2026-04-27T03:36:11 [INFO    ] benchmark.runner:   Load complete in 1370.05 ms
+2026-04-27T03:36:12 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T03:36:12 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 243.08 ms
+2026-04-27T03:36:13 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T03:36:21 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T03:36:21 [INFO    ] benchmark.runner:   Done | 1st-call=243.08 ms | mean=7.28 ms | p95=8.64 ms | kernel=7.23 ms | status=success
+2026-04-27T03:36:21 [INFO    ] run_one_model: Process exit | status=success

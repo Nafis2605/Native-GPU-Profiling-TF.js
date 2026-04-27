@@ -1,0 +1,66 @@
+2026-04-26T13:38:25 [INFO    ] run_one_model: Process start | pid=40116 | model_id=3 | trial_id=0
+2026-04-26T13:38:26 [INFO    ] benchmark.runner: Trial 0 | Model 3 (speech_command_recognizer) | Framework: pytorch
+2026-04-26T13:38:26 [INFO    ] benchmark.models.model_speech_command: Building SpeechCNN (depthwise-sep, random init) on cuda …
+2026-04-26T13:38:26 [INFO    ] benchmark.models.model_speech_command: SpeechCNN ready on cuda
+2026-04-26T13:38:26 [INFO    ] benchmark.runner:   Load complete in 63.46 ms
+2026-04-26T13:38:26 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T13:38:26 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 134.85 ms
+2026-04-26T13:38:27 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T13:38:28 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T13:38:28 [INFO    ] benchmark.runner:   Done | 1st-call=134.85 ms | mean=0.92 ms | p95=1.63 ms | kernel=0.89 ms | status=success
+2026-04-26T13:38:28 [INFO    ] run_one_model: Process exit | status=success
+2026-04-26T14:24:34 [INFO    ] run_one_model: Process start | pid=20964 | model_id=3 | trial_id=0
+2026-04-26T14:24:34 [INFO    ] benchmark.runner: Trial 0 | Model 3 (speech_command_recognizer) | Framework: pytorch
+2026-04-26T14:24:34 [INFO    ] benchmark.models.model_speech_command: Building SpeechCNN (depthwise-sep, random init) on cuda …
+2026-04-26T14:24:34 [INFO    ] benchmark.models.model_speech_command: SpeechCNN ready on cuda
+2026-04-26T14:24:34 [INFO    ] benchmark.runner:   Load complete in 65.17 ms
+2026-04-26T14:24:35 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T14:24:35 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 126.19 ms
+2026-04-26T14:24:36 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T14:24:37 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T14:24:37 [INFO    ] benchmark.runner:   Done | 1st-call=126.19 ms | mean=0.84 ms | p95=1.33 ms | kernel=0.82 ms | status=success
+2026-04-26T14:24:37 [INFO    ] run_one_model: Process exit | status=success
+2026-04-26T15:45:10 [INFO    ] run_one_model: Process start | pid=36672 | model_id=3 | trial_id=0
+2026-04-26T15:45:10 [INFO    ] benchmark.runner: Trial 0 | Model 3 (speech_command_recognizer) | Framework: pytorch
+2026-04-26T15:45:10 [INFO    ] benchmark.models.model_speech_command: Building SpeechCNN (depthwise-sep, random init) on cuda …
+2026-04-26T15:45:10 [INFO    ] benchmark.models.model_speech_command: SpeechCNN ready on cuda
+2026-04-26T15:45:10 [INFO    ] benchmark.runner:   Load complete in 71.98 ms
+2026-04-26T15:45:11 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T15:45:11 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 126.22 ms
+2026-04-26T15:45:12 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T15:45:13 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T15:45:13 [INFO    ] benchmark.runner:   Done | 1st-call=126.22 ms | mean=0.84 ms | p95=1.34 ms | kernel=0.81 ms | status=success
+2026-04-26T15:45:13 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T02:24:49 [INFO    ] run_one_model: Process start | pid=26856 | model_id=3 | trial_id=0
+2026-04-27T02:24:49 [INFO    ] benchmark.runner: Trial 0 | Model 3 (speech_command_recognizer) | Framework: pytorch
+2026-04-27T02:24:49 [INFO    ] benchmark.models.model_speech_command: Building SpeechCNN (depthwise-sep, random init) on cuda …
+2026-04-27T02:24:49 [INFO    ] benchmark.models.model_speech_command: SpeechCNN ready on cuda
+2026-04-27T02:24:49 [INFO    ] benchmark.runner:   Load complete in 61.95 ms
+2026-04-27T02:24:50 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T02:24:50 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 127.21 ms
+2026-04-27T02:24:51 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T02:24:52 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T02:24:52 [INFO    ] benchmark.runner:   Done | 1st-call=127.21 ms | mean=0.89 ms | p95=1.38 ms | kernel=0.86 ms | status=success
+2026-04-27T02:24:52 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T02:49:24 [INFO    ] run_one_model: Process start | pid=35604 | model_id=3 | trial_id=0
+2026-04-27T02:49:24 [INFO    ] benchmark.runner: Trial 0 | Model 3 (speech_command_recognizer) | Framework: pytorch
+2026-04-27T02:49:24 [INFO    ] benchmark.models.model_speech_command: Building SpeechCNN (depthwise-sep, random init) on cuda …
+2026-04-27T02:49:24 [INFO    ] benchmark.models.model_speech_command: SpeechCNN ready on cuda
+2026-04-27T02:49:24 [INFO    ] benchmark.runner:   Load complete in 62.66 ms
+2026-04-27T02:49:25 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T02:49:25 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 128.19 ms
+2026-04-27T02:49:26 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T02:49:27 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T02:49:27 [INFO    ] benchmark.runner:   Done | 1st-call=128.19 ms | mean=0.77 ms | p95=1.02 ms | kernel=0.74 ms | status=success
+2026-04-27T02:49:27 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T03:25:07 [INFO    ] run_one_model: Process start | pid=26928 | model_id=3 | trial_id=0
+2026-04-27T03:25:07 [INFO    ] benchmark.runner: Trial 0 | Model 3 (speech_command_recognizer) | Framework: pytorch
+2026-04-27T03:25:07 [INFO    ] benchmark.models.model_speech_command: Building SpeechCNN (depthwise-sep, random init) on cuda …
+2026-04-27T03:25:07 [INFO    ] benchmark.models.model_speech_command: SpeechCNN ready on cuda
+2026-04-27T03:25:07 [INFO    ] benchmark.runner:   Load complete in 63.75 ms
+2026-04-27T03:25:07 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T03:25:07 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 124.80 ms
+2026-04-27T03:25:08 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T03:25:09 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T03:25:09 [INFO    ] benchmark.runner:   Done | 1st-call=124.80 ms | mean=0.86 ms | p95=1.34 ms | kernel=0.83 ms | status=success
+2026-04-27T03:25:09 [INFO    ] run_one_model: Process exit | status=success

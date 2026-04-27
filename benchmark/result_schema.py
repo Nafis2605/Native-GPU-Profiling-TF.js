@@ -6,9 +6,15 @@ It captures all metrics from the spec:
 
   - Model identity & mapping metadata
   - Hardware & software environment fingerprint
-  - Timing: model load, warm-up, measured-phase aggregates
+  - Timing: model load, 1st-call, steady-state inference aggregates
   - GPU telemetry: utilization, memory, power, energy
   - Outcome: success / skipped / failed / unsupported
+
+Two headline metrics per trial:
+  first_call_ms        - single timed inference after model load; captures
+                         CUDA JIT compilation and cuDNN algorithm selection.
+  mean_inference_ms    - mean of 1,024 steady-state iterations run after
+                         the 1st-call phase; represents stable per-call cost.
 
 AggregatedResult summarises cross-trial statistics after all 5 trials
 complete (computed in post-processing, not inside the trial subprocess).
@@ -25,7 +31,10 @@ from typing import Optional
 # ── Schema version ─────────────────────────────────────────────────────────
 # 1.1 — Added RunMode, run_mode and profiler_artifact_paths to TrialResult.
 # 1.2 — Added PROFILE_NCU to RunMode; added NcuKernelResult dataclass.
-SCHEMA_VERSION = "1.2"
+# 1.3 — Replaced all warmup fields with single first_call_ms field.
+#        Removed: first_inference_ms, warmup_total_ms, mean/std/p50/p95/p99/
+#                 min/max_warmup_ms, warmup_steady_mean_ms, warmup_steady_std_ms.
+SCHEMA_VERSION = "1.3"
 
 
 # ── RunMode ─────────────────────────────────────────────────────────────────
@@ -112,13 +121,14 @@ class TrialResult:
     # Always True in this suite; recorded for schema completeness
     process_fresh_start: bool = True
 
-    # ── Timing: loading & warm-up (milliseconds) ───────────────────────────
-    # Wall-clock time from process start to model ready (GPU weights loaded)
+    # ── Timing: loading & 1st-call (milliseconds) ────────────────────────────
+    # Wall-clock time from process start to model weights resident on GPU
     model_load_ms: float = 0.0
-    # Wall-clock time for the very first inference call (after load)
-    first_inference_ms: float = 0.0
-    # Wall-clock time for all 10 warm-up iterations combined
-    warmup_total_ms: float = 0.0
+    # Wall-clock time for the single timed inference run immediately after
+    # model loading (Phase 2).  Captures CUDA JIT compilation, cuDNN algorithm
+    # selection, and first-use memory allocation.  This is reported as the
+    # "1st-Call" metric and is NOT included in steady-state inference stats.
+    first_call_ms: float = 0.0
 
     # ── Timing: measured phase (milliseconds) ──────────────────────────────
     measured_iterations: int = 1024

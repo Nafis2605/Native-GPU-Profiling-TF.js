@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import csv
 import logging
+import time
 import traceback
 from pathlib import Path
 from typing import Optional
@@ -38,7 +39,7 @@ from benchmark.result_schema import (
     write_trial_result_csv,
     write_trial_result_json,
 )
-from benchmark.telemetry import NvmlTelemetry
+from benchmark.telemetry import NvidiaSmiTelemetry
 from benchmark.timing import WallClockTimer, measure_inference
 from benchmark.utils import compute_statistics, set_global_seed
 
@@ -146,6 +147,15 @@ def run_trial(
     # ── Pre-generate inputs (before measuring — avoids I/O jitter) ────────
     inputs = model.generate_input(seed=random_seed)
 
+    # ── Start telemetry before warm-up so nvidia-smi (1 Hz) has time ─────
+    # nvidia-smi --loop=1 emits its first line ~100 ms after process start;
+    # starting here ensures the measured phase is covered even for short runs.
+    telemetry = NvidiaSmiTelemetry(device_index=0, run_mode=run_mode)
+    telemetry.start()
+    # Brief pause so the nvidia-smi subprocess emits at least one line
+    # before the warmup loop begins.
+    time.sleep(1.1)
+
     # ── Phase 2: Warm-up iterations ───────────────────────────────────────
     first_inference_ms = 0.0
     warmup_total_ms = 0.0
@@ -164,6 +174,7 @@ def run_trial(
 
     except Exception as exc:
         logger.error("  Model %d warm-up failed: %s", model_id, exc)
+        telemetry.stop()
         result = _model_result(model, trial_id, device_name, cuda_version, driver_version)
         result.model_load_ms = model_load_ms
         result.status = STATUS_FAILED
@@ -176,9 +187,6 @@ def run_trial(
     wall_times: list[float] = []
     kernel_times: list[float] = []
     consecutive_failures = 0
-
-    telemetry = NvmlTelemetry(device_index=0, poll_hz=nvml_poll_hz, run_mode=run_mode)
-    telemetry.start()
 
     for i in range(measured_iterations):
         try:

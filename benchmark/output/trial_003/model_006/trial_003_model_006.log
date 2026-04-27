@@ -1,28 +1,66 @@
-2026-04-01T20:23:17 [INFO    ] run_one_model: Process start | pid=492 | model_id=6 | trial_id=3
-2026-04-01T20:23:17 [INFO    ] benchmark.runner: Trial 3 | Model 6 (mobilenetv3) | Framework: pytorch
-2026-04-01T20:23:18 [INFO    ] benchmark.models.model_mobilenetv3: Loading MobileNetV3-Small (torchvision IMAGENET1K_V1) on cuda …
-2026-04-01T20:23:18 [ERROR   ] benchmark.runner:   Model 6 load failed: <urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>
-2026-04-01T20:23:18 [INFO    ] run_one_model: Process exit | status=failed
-2026-04-01T20:28:12 [INFO    ] run_one_model: Process start | pid=10388 | model_id=6 | trial_id=3
-2026-04-01T20:28:12 [INFO    ] benchmark.runner: Trial 3 | Model 6 (mobilenetv3) | Framework: pytorch
-2026-04-01T20:28:13 [INFO    ] benchmark.models.model_mobilenetv3: Loading MobileNetV3-Small (torchvision IMAGENET1K_V1) on cuda …
-2026-04-01T20:28:13 [ERROR   ] benchmark.runner:   Model 6 load failed: Torch not compiled with CUDA enabled
-2026-04-01T20:28:13 [INFO    ] run_one_model: Process exit | status=failed
-2026-04-01T20:28:30 [INFO    ] run_one_model: Process start | pid=13036 | model_id=6 | trial_id=3
-2026-04-01T20:28:30 [INFO    ] benchmark.runner: Trial 3 | Model 6 (mobilenetv3) | Framework: pytorch
-2026-04-01T20:28:31 [INFO    ] benchmark.models.model_mobilenetv3: Loading MobileNetV3-Small (torchvision IMAGENET1K_V1) on cuda …
-2026-04-01T20:28:31 [ERROR   ] benchmark.runner:   Model 6 load failed: Torch not compiled with CUDA enabled
-2026-04-01T20:28:31 [INFO    ] run_one_model: Process exit | status=failed
-2026-04-01T20:28:51 [INFO    ] run_one_model: Process start | pid=18268 | model_id=6 | trial_id=3
-2026-04-01T20:28:51 [INFO    ] benchmark.runner: Trial 3 | Model 6 (mobilenetv3) | Framework: pytorch
-2026-04-01T20:28:52 [INFO    ] benchmark.models.model_mobilenetv3: Loading MobileNetV3-Small (torchvision IMAGENET1K_V1) on cuda …
-2026-04-01T20:28:52 [ERROR   ] benchmark.runner:   Model 6 load failed: Torch not compiled with CUDA enabled
-2026-04-01T20:28:52 [INFO    ] run_one_model: Process exit | status=failed
-2026-04-01T20:58:10 [INFO    ] run_one_model: Process start | pid=15728 | model_id=6 | trial_id=3
-2026-04-01T20:58:10 [INFO    ] benchmark.runner: Trial 3 | Model 6 (mobilenetv3) | Framework: pytorch
-2026-04-01T20:58:11 [INFO    ] benchmark.models.model_mobilenetv3: Loading MobileNetV3-Small (torchvision IMAGENET1K_V1) on cuda …
-2026-04-01T20:58:11 [INFO    ] benchmark.models.model_mobilenetv3: MobileNetV3-Small loaded and ready on cuda
-2026-04-01T20:58:11 [INFO    ] benchmark.runner:   Load complete in 1035.43 ms
-2026-04-01T20:58:11 [INFO    ] benchmark.runner:   Warm-up: 10 iters in 191.93 ms (1st=168.70 ms)
-2026-04-01T20:58:14 [INFO    ] benchmark.runner:   Done | mean=2.72 ms | p95=3.58 ms | kernel=2.70 ms | status=success
-2026-04-01T20:58:14 [INFO    ] run_one_model: Process exit | status=success
+2026-04-26T13:48:43 [INFO    ] run_one_model: Process start | pid=27828 | model_id=6 | trial_id=3
+2026-04-26T13:48:43 [INFO    ] benchmark.runner: Trial 3 | Model 6 (mobilenetv3) | Framework: pytorch
+2026-04-26T13:48:45 [INFO    ] benchmark.models.model_mobilenetv3: Loading MobileNetV3-Small (torchvision IMAGENET1K_V1) on cuda …
+2026-04-26T13:48:45 [INFO    ] benchmark.models.model_mobilenetv3: MobileNetV3-Small loaded and ready on cuda
+2026-04-26T13:48:45 [INFO    ] benchmark.runner:   Load complete in 1320.87 ms
+2026-04-26T13:48:45 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T13:48:46 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 188.86 ms
+2026-04-26T13:48:47 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T13:48:50 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T13:48:50 [INFO    ] benchmark.runner:   Done | 1st-call=188.86 ms | mean=3.17 ms | p95=3.94 ms | kernel=3.14 ms | status=success
+2026-04-26T13:48:50 [INFO    ] run_one_model: Process exit | status=success
+2026-04-26T14:33:04 [INFO    ] run_one_model: Process start | pid=37512 | model_id=6 | trial_id=3
+2026-04-26T14:33:04 [INFO    ] benchmark.runner: Trial 3 | Model 6 (mobilenetv3) | Framework: pytorch
+2026-04-26T14:33:05 [INFO    ] benchmark.models.model_mobilenetv3: Loading MobileNetV3-Small (torchvision IMAGENET1K_V1) on cuda …
+2026-04-26T14:33:05 [INFO    ] benchmark.models.model_mobilenetv3: MobileNetV3-Small loaded and ready on cuda
+2026-04-26T14:33:05 [INFO    ] benchmark.runner:   Load complete in 1271.67 ms
+2026-04-26T14:33:06 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T14:33:06 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 177.83 ms
+2026-04-26T14:33:07 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T14:33:10 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T14:33:10 [INFO    ] benchmark.runner:   Done | 1st-call=177.83 ms | mean=3.09 ms | p95=4.25 ms | kernel=3.06 ms | status=success
+2026-04-26T14:33:10 [INFO    ] run_one_model: Process exit | status=success
+2026-04-26T15:53:32 [INFO    ] run_one_model: Process start | pid=25132 | model_id=6 | trial_id=3
+2026-04-26T15:53:32 [INFO    ] benchmark.runner: Trial 3 | Model 6 (mobilenetv3) | Framework: pytorch
+2026-04-26T15:53:33 [INFO    ] benchmark.models.model_mobilenetv3: Loading MobileNetV3-Small (torchvision IMAGENET1K_V1) on cuda …
+2026-04-26T15:53:33 [INFO    ] benchmark.models.model_mobilenetv3: MobileNetV3-Small loaded and ready on cuda
+2026-04-26T15:53:33 [INFO    ] benchmark.runner:   Load complete in 1252.11 ms
+2026-04-26T15:53:33 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-26T15:53:34 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 180.86 ms
+2026-04-26T15:53:35 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-26T15:53:38 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-26T15:53:38 [INFO    ] benchmark.runner:   Done | 1st-call=180.86 ms | mean=2.96 ms | p95=3.22 ms | kernel=2.93 ms | status=success
+2026-04-26T15:53:38 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T02:33:21 [INFO    ] run_one_model: Process start | pid=23084 | model_id=6 | trial_id=3
+2026-04-27T02:33:21 [INFO    ] benchmark.runner: Trial 3 | Model 6 (mobilenetv3) | Framework: pytorch
+2026-04-27T02:33:22 [INFO    ] benchmark.models.model_mobilenetv3: Loading MobileNetV3-Small (torchvision IMAGENET1K_V1) on cuda …
+2026-04-27T02:33:22 [INFO    ] benchmark.models.model_mobilenetv3: MobileNetV3-Small loaded and ready on cuda
+2026-04-27T02:33:22 [INFO    ] benchmark.runner:   Load complete in 1256.18 ms
+2026-04-27T02:33:23 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T02:33:23 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 178.97 ms
+2026-04-27T02:33:24 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T02:33:27 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T02:33:29 [INFO    ] benchmark.runner:   Done | 1st-call=178.97 ms | mean=3.00 ms | p95=3.77 ms | kernel=2.97 ms | status=success
+2026-04-27T02:33:29 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T02:58:07 [INFO    ] run_one_model: Process start | pid=3496 | model_id=6 | trial_id=3
+2026-04-27T02:58:07 [INFO    ] benchmark.runner: Trial 3 | Model 6 (mobilenetv3) | Framework: pytorch
+2026-04-27T02:58:08 [INFO    ] benchmark.models.model_mobilenetv3: Loading MobileNetV3-Small (torchvision IMAGENET1K_V1) on cuda …
+2026-04-27T02:58:08 [INFO    ] benchmark.models.model_mobilenetv3: MobileNetV3-Small loaded and ready on cuda
+2026-04-27T02:58:08 [INFO    ] benchmark.runner:   Load complete in 1352.57 ms
+2026-04-27T02:58:09 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T02:58:09 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 188.28 ms
+2026-04-27T02:58:10 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T02:58:13 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T02:58:13 [INFO    ] benchmark.runner:   Done | 1st-call=188.28 ms | mean=3.02 ms | p95=4.53 ms | kernel=2.98 ms | status=success
+2026-04-27T02:58:13 [INFO    ] run_one_model: Process exit | status=success
+2026-04-27T03:34:07 [INFO    ] run_one_model: Process start | pid=36912 | model_id=6 | trial_id=3
+2026-04-27T03:34:07 [INFO    ] benchmark.runner: Trial 3 | Model 6 (mobilenetv3) | Framework: pytorch
+2026-04-27T03:34:08 [INFO    ] benchmark.models.model_mobilenetv3: Loading MobileNetV3-Small (torchvision IMAGENET1K_V1) on cuda …
+2026-04-27T03:34:08 [INFO    ] benchmark.models.model_mobilenetv3: MobileNetV3-Small loaded and ready on cuda
+2026-04-27T03:34:08 [INFO    ] benchmark.runner:   Load complete in 1270.35 ms
+2026-04-27T03:34:09 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T03:34:09 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 179.16 ms
+2026-04-27T03:34:10 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T03:34:13 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T03:34:13 [INFO    ] benchmark.runner:   Done | 1st-call=179.16 ms | mean=3.21 ms | p95=4.68 ms | kernel=3.18 ms | status=success
+2026-04-27T03:34:13 [INFO    ] run_one_model: Process exit | status=success

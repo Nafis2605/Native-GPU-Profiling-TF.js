@@ -1,0 +1,48 @@
+Command : C:\ProgramData\miniconda3\python.exe C:\Users\fanaf\Desktop\Native\native_tfjs_bench\scripts\run_one_model.py --model-id 5 --trial-id 2 --output-dir benchmark\output\trial_002\model_005 --warmup 10 --iterations 1024 --seed 12345 --device cuda --run-mode clean_benchmark
+Exit code: 0
+Elapsed  : 55.36s
+Timed out: False
+
+--- STDOUT ---
+2026-04-27T03:31:33 [INFO    ] run_one_model: Process start | pid=13656 | model_id=5 | trial_id=2
+2026-04-27T03:31:33 [INFO    ] benchmark.runner: Trial 2 | Model 5 (mobilebert) | Framework: pytorch
+2026-04-27T03:31:36 [INFO    ] benchmark.models.model_mobilebert: Loading google/mobilebert-uncased on cuda …
+2026-04-27T03:31:36 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 81b6e9d4-280f-4b8b-bd0b-60feb0eeaa35)')' thrown while requesting HEAD https://huggingface.co/google/mobilebert-uncased/resolve/main/config.json
+2026-04-27T03:31:36 [WARNING ] huggingface_hub.utils._http: Retrying in 1s [Retry 1/5].
+2026-04-27T03:31:38 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 4d7c651c-ce0c-42a0-8be8-cde113dad1f1)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/google/mobilebert-uncased/1f90a6c24c7879273a291d34a849033eba2dbc0f/config.json
+2026-04-27T03:31:38 [WARNING ] huggingface_hub.utils._http: Retrying in 1s [Retry 1/5].
+2026-04-27T03:31:39 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: a0a79f99-5907-4714-8102-42a313f21e91)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/google/mobilebert-uncased/1f90a6c24c7879273a291d34a849033eba2dbc0f/config.json
+2026-04-27T03:31:39 [WARNING ] huggingface_hub.utils._http: Retrying in 2s [Retry 2/5].
+2026-04-27T03:31:42 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 44373e55-5691-49c8-be1b-c352e375ea04)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/google/mobilebert-uncased/1f90a6c24c7879273a291d34a849033eba2dbc0f/config.json
+2026-04-27T03:31:42 [WARNING ] huggingface_hub.utils._http: Retrying in 4s [Retry 3/5].
+2026-04-27T03:31:46 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 1afbae3f-c67f-4d57-b5b5-6f7ad76390db)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/google/mobilebert-uncased/1f90a6c24c7879273a291d34a849033eba2dbc0f/config.json
+2026-04-27T03:31:46 [WARNING ] huggingface_hub.utils._http: Retrying in 8s [Retry 4/5].
+2026-04-27T03:31:54 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 46273ced-015b-4295-8ebb-e205e80ccf9f)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/google/mobilebert-uncased/1f90a6c24c7879273a291d34a849033eba2dbc0f/config.json
+2026-04-27T03:31:54 [WARNING ] huggingface_hub.utils._http: Retrying in 8s [Retry 5/5].
+2026-04-27T03:32:02 [WARNING ] huggingface_hub.utils._http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: bc682c41-eebc-44e1-a066-315a8b9e61f3)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/google/mobilebert-uncased/1f90a6c24c7879273a291d34a849033eba2dbc0f/config.json
+2026-04-27T03:32:03 [INFO    ] benchmark.models.model_mobilebert: MobileBERT loaded on cuda
+2026-04-27T03:32:03 [INFO    ] benchmark.runner:   Load complete in 29929.18 ms
+2026-04-27T03:32:03 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T03:32:03 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 111.43 ms
+2026-04-27T03:32:04 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T03:32:26 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T03:32:26 [INFO    ] benchmark.runner:   Done | 1st-call=111.43 ms | mean=20.63 ms | p95=22.44 ms | kernel=20.60 ms | status=success
+2026-04-27T03:32:26 [INFO    ] run_one_model: Process exit | status=success
+
+
+--- STDERR ---
+2026-04-27 03:31:34.521248: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-04-27 03:31:35.169965: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+'(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 81b6e9d4-280f-4b8b-bd0b-60feb0eeaa35)')' thrown while requesting HEAD https://huggingface.co/google/mobilebert-uncased/resolve/main/config.json
+Retrying in 1s [Retry 1/5].
+'(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 4d7c651c-ce0c-42a0-8be8-cde113dad1f1)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/google/mobilebert-uncased/1f90a6c24c7879273a291d34a849033eba2dbc0f/config.json
+Retrying in 1s [Retry 1/5].
+'(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: a0a79f99-5907-4714-8102-42a313f21e91)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/google/mobilebert-uncased/1f90a6c24c7879273a291d34a849033eba2dbc0f/config.json
+Retrying in 2s [Retry 2/5].
+'(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 44373e55-5691-49c8-be1b-c352e375ea04)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/google/mobilebert-uncased/1f90a6c24c7879273a291d34a849033eba2dbc0f/config.json
+Retrying in 4s [Retry 3/5].
+'(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 1afbae3f-c67f-4d57-b5b5-6f7ad76390db)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/google/mobilebert-uncased/1f90a6c24c7879273a291d34a849033eba2dbc0f/config.json
+Retrying in 8s [Retry 4/5].
+'(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 46273ced-015b-4295-8ebb-e205e80ccf9f)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/google/mobilebert-uncased/1f90a6c24c7879273a291d34a849033eba2dbc0f/config.json
+Retrying in 8s [Retry 5/5].
+'(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: bc682c41-eebc-44e1-a066-315a8b9e61f3)')' thrown while requesting HEAD https://huggingface.co/api/resolve-cache/models/google/mobilebert-uncased/1f90a6c24c7879273a291d34a849033eba2dbc0f/config.json

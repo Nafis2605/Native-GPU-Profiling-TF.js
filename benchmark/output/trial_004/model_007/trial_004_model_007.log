@@ -1,0 +1,4 @@
+2026-04-26T13:49:21 [INFO    ] run_one_model: Process start | pid=21192 | model_id=7 | trial_id=4
+2026-04-26T13:49:21 [INFO    ] benchmark.runner: Trial 4 | Model 7 (ar_portrait_depth) | Framework: pytorch
+2026-04-26T13:49:21 [WARNING ] benchmark.runner:   Model 7 not yet implemented: Model 'ar_portrait_depth' (id=7) is not yet implemented (Phase 1B stub). Blocker: UNRESOLVED — No exact PyTorch equivalent in standard libraries. MiDaS v3 (exact task) requires 'timm' — dependency fails. Alternative: use custom CNN or fix MiDaS installation.. See docs/model_mapping_audit.md for implementation guidance.
+2026-04-26T13:49:21 [INFO    ] run_one_model: Process exit | status=unsupported

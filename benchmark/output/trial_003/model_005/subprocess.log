@@ -1,0 +1,22 @@
+Command : C:\ProgramData\miniconda3\python.exe C:\Users\fanaf\Desktop\Native\native_tfjs_bench\scripts\run_one_model.py --model-id 5 --trial-id 3 --output-dir benchmark\output\trial_003\model_005 --warmup 10 --iterations 1024 --seed 12345 --device cuda --run-mode clean_benchmark
+Exit code: 0
+Elapsed  : 30.02s
+Timed out: False
+
+--- STDOUT ---
+2026-04-27T03:32:31 [INFO    ] run_one_model: Process start | pid=21288 | model_id=5 | trial_id=3
+2026-04-27T03:32:31 [INFO    ] benchmark.runner: Trial 3 | Model 5 (mobilebert) | Framework: pytorch
+2026-04-27T03:32:35 [INFO    ] benchmark.models.model_mobilebert: Loading google/mobilebert-uncased on cuda …
+2026-04-27T03:32:36 [INFO    ] benchmark.models.model_mobilebert: MobileBERT loaded on cuda
+2026-04-27T03:32:36 [INFO    ] benchmark.runner:   Load complete in 4443.80 ms
+2026-04-27T03:32:36 [INFO    ] benchmark.runner:   [Phase 2] 1st-call: single timed inference (first-use measurement)
+2026-04-27T03:32:36 [INFO    ] benchmark.runner:   [Phase 2] 1st-call complete: 106.49 ms
+2026-04-27T03:32:37 [INFO    ] benchmark.runner:   [Phase 3] Measurement: running 1024 full inference passes (timed)
+2026-04-27T03:32:59 [INFO    ] benchmark.runner:   [Phase 3] Measurement complete: 1024/1024 iters recorded
+2026-04-27T03:32:59 [INFO    ] benchmark.runner:   Done | 1st-call=106.49 ms | mean=21.37 ms | p95=25.18 ms | kernel=21.34 ms | status=success
+2026-04-27T03:32:59 [INFO    ] run_one_model: Process exit | status=success
+
+
+--- STDERR ---
+2026-04-27 03:32:32.892912: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-04-27 03:32:33.546426: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.

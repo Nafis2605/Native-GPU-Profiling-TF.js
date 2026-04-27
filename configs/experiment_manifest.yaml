@@ -1,7 +1,7 @@
 benchmark:
   name: native_tfjs_pretrained_phase1
   version: "1.0"
-  description: "Native Windows CUDA benchmark for 10 TF.js pretrained model equivalents"
+  description: "Native Windows CUDA benchmark for 8 TF.js pretrained model equivalents (models 1-6, 9-10; 7-8 unresolved)"
 
 # ── Trial configuration ────────────────────────────────────────────────────
 trial_config:
@@ -11,8 +11,11 @@ trial_config:
   batch_size: 1
   random_seed: 12345
   # Maximum wall-clock seconds allowed per subprocess trial before timeout
-  timeout_seconds_per_trial: 600
-
+  timeout_seconds_per_trial: 600  # Seconds to pause between consecutive trials for inter-run isolation.
+  # Gives the GPU driver time to reclaim VRAM, the OS to drain deferred
+  # cleanup, and the thermal subsystem partial time to recover.
+  # Set to 0 to disable. Does not affect measured inference latency.
+  inter_trial_cooldown_s: 3.0
 # ── Model list ─────────────────────────────────────────────────────────────
 # One entry per TF.js pretrained model from the paper.
 # ── Profiler configuration ────────────────────────────────────────────────────
@@ -152,7 +155,7 @@ models:
     native_framework: mediapipe
     native_model_name: portrait_depth.task
     exactness_status: exact_official_equivalent
-    enabled: true
+    enabled: false
     input_shape: [1, 256, 256, 3]
     input_dtype: float32
     notes: >
@@ -166,7 +169,7 @@ models:
     native_framework: onnxruntime-gpu
     native_model_name: bodypix.onnx
     exactness_status: near_equivalent_substitute
-    enabled: true
+    enabled: false
     input_shape: [1, 3, 513, 513]
     input_dtype: float32
     notes: >
